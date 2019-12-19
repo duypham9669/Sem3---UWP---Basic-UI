@@ -32,5 +32,22 @@ namespace ASM_SEM3_UWP.fullPages
             this.Frame.Navigate(typeof(fullPages.Register));
 
         }
+
+        private void btn_Submit(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_home_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+
+        }
+        private void validate()
+        {
+            String email2 = email.Text;
+            String pass2 = pass.Text;
+
+        }
     }
 }

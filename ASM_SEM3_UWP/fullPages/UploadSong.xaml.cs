@@ -32,5 +32,18 @@ namespace ASM_SEM3_UWP.fullPages
             this.Frame.Navigate(typeof(fullPages.ListSong));
 
         }
+
+       
+
+        private void btn_upload(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btn_home_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+
+        }
     }
 }

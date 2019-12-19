@@ -6,7 +6,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Gray">
 
 
     <Grid>
@@ -20,18 +20,19 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <HyperlinkButton
-            x:Name="btn_home"
-            Margin="0,50,0,0"
-            FontSize="40"
-            >Home</HyperlinkButton>
+       
         <TextBlock
              Foreground="Black"
             Padding="0,40,0,0"
             TextAlignment="Center"
             FontSize="70"
-            FontFamily="Times New Roman" SelectionChanged="TextBlock_SelectionChanged"
+            FontFamily="Times New Roman"
             >Up Load New Song</TextBlock>
+        <HyperlinkButton
+            x:Name="btn_home"
+            Margin="0,50,0,0"
+            FontSize="40" Click="btn_home_Click"
+            >Home</HyperlinkButton>
         <Grid
             Grid.Row="1"
             Grid.Column="0">

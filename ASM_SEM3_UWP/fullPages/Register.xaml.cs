@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -25,7 +26,7 @@ namespace ASM_SEM3_UWP.fullPages
     public sealed partial class Register : Page
     {
         private registerService registerservice;
-        private DateTime _birthDay;
+        private DateTime _birthDay=DateTime.Now;
 
         public Register()
         {
@@ -38,10 +39,10 @@ namespace ASM_SEM3_UWP.fullPages
             this.Frame.Navigate(typeof(fullPages.Login));
 
         }
-
+        
         private void btn_Register(object sender, RoutedEventArgs e)
         {
-            registerservice.register();
+            validateFrom();
         }
         private void Birthday_OnDateChanged(CalendarDatePicker sender, CalendarDatePickerDateChangedEventArgs args)
         {
@@ -52,46 +53,66 @@ namespace ASM_SEM3_UWP.fullPages
         }
         private void validateFrom()
         {
-            String firstName = vld_firstName.Text;
-            String lastName = vld_lastName.Text;
-            String pass1 = vld_pass1.Text;
-            String pass2 = vld_pass2.Text;
-            String address = vld_address.Text;
-            String phone = vld_phone.Text;
-            String avataLink = vld_avatalink.Text;
-/*            String gender = vld_
-*/            String email = vld_address.Text;
-            if(firstName is null || firstName.Length < 1)
+            String firstName_ = firstName.Text;
+            String lastName_ = lastName.Text;
+            String pass1_ = pass1.Password.ToString();
+            String pass2_ = pass2.Password.ToString(); 
+            String address_ = address.Text;
+            String phone_ = phone.Text;
+            String avataLink_ = avataLink.Text;
+            
+            String email_ = email.Text;
+            if(firstName_ is null || firstName_.Length < 1)
             {
                 vld_firstName.Text = "input name";
             }
-            if (lastName is null || lastName.Length < 1)
+            if (lastName_ is null || lastName_.Length < 1)
             {
                 vld_lastName.Text = "input last name";
             }
-            if (pass1 is null || pass1.Length < 1)
+            if (pass1_ is null || pass1_.Length < 1)
             {
                 vld_pass1.Text = "input pass";
             }
-            if (pass2 is null || pass2.Length < 1)
+            if (pass2_ is null || pass2_.Length < 1)
             {
                 vld_pass2.Text = "input pass";
             }
-            if (!pass1.Equals(pass2))
+            if (!pass1_.Equals(pass2_))
             {
                 vld_pass2.Text = "unmatch";
             }
-            if (address is null || address.Length < 1)
+            if (address_ is null || address_.Length < 1)
             {
                 vld_address.Text = "input address";
             }
-            if (email is null || email.Length < 1)
+            if (email_ is null || email_.Length < 11)
             {
                 vld_email.Text = "input email";
             }
+            bool match;
 
+            if ((match = Regex.IsMatch(email_, "@gmail.com")) == false)
+            {
+                vld_email.Text = "input again email";
+            }
+
+            if ((DateTime.Now - _birthDay).TotalDays < 3650)
+            {
+                vld_dateOfBirth.Text = "input date of birth";
+            }
+            int i = 0;
+            if (!Int32.TryParse(phone_, out i)||phone_.Length<9)
+            {
+                vld_phone.Text = "input phone again";
+            }
 
         }
 
+        private void btn_home_Click(object sender, RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(MainPage));
+
+        }
     }
 }
