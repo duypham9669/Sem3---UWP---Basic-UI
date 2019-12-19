@@ -30,7 +30,6 @@
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Inlines" />
       <RootProperty Name="VerticalAlignment" />
-      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.HyperlinkButton">
       <RootProperty Name="Margin" />
@@ -64,6 +63,12 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
       <RootEvent Name="DateChanged" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
+      <RootProperty Name="FontSize" />
+      <RootProperty Name="Content" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="ASM_SEM3_UWP.fullPages.Register" />
     <RootType FullName="ASM_SEM3_UWP.fullPages.UploadSong" />

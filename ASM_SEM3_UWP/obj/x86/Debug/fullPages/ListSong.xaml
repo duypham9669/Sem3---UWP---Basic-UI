@@ -20,17 +20,17 @@
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
         
-        <TextBlock x:ConnectionId='2'
+        <TextBlock
              Foreground="Black"
             Padding="0,30,0,0"
             TextAlignment="Center"
             FontSize="80"
-            FontFamily="Times New Roman"                                              
+            FontFamily="Times New Roman" 
             >List All Song</TextBlock>
-        <HyperlinkButton x:ConnectionId='3'
+        <HyperlinkButton x:ConnectionId='2'
             x:Name="btn_home"
             Margin="0,50,0,0"
-            FontSize="40"
+            FontSize="40"                       
             >Home
         </HyperlinkButton>
         <Grid

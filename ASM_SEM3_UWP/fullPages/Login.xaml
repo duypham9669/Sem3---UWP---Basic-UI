@@ -76,7 +76,7 @@
                 TextAlignment="Center"
                 ></TextBlock>
             <TextBlock
-                x:Name="vld_name"
+                x:Name="vld_email"
                 Grid.Row="0"
                 Grid.Column="2"
                 FontSize="60"

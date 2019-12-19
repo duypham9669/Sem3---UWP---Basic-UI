@@ -27,7 +27,8 @@ namespace ASM_SEM3_UWP.fullPages
             this.InitializeComponent();
         }
 
-        private void TextBlock_SelectionChanged(object sender, RoutedEventArgs e)
+
+        private void btn_home_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
 

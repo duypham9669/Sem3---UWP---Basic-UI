@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Text.RegularExpressions;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -46,7 +47,21 @@ namespace ASM_SEM3_UWP.fullPages
         private void validate()
         {
             String email2 = email.Text;
-            String pass2 = pass.Text;
+            String pass2 = pass.Password.ToString();
+            if (email2 is null || email2.Length < 11)
+            {
+                vld_email.Text = "input email";
+            }
+            bool match;
+
+            if ((match = Regex.IsMatch(email2, "@gmail.com")) == false)
+            {
+                vld_email.Text = "input again email";
+            }
+            if (pass2 is null || pass2.Length < 1)
+            {
+                vld_pass.Text = "input pass";
+            }
 
         }
     }

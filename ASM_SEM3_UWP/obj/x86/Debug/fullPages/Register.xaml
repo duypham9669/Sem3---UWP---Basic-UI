@@ -6,13 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    Background="Gray">
 
 
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="5*">
+            <RowDefinition Height="7*">
 
             </RowDefinition>
 
@@ -20,11 +20,7 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <HyperlinkButton x:ConnectionId='2'
-            x:Name="btn_home"
-            Margin="0,50,0,0"
-            FontSize="40"
-            >Home</HyperlinkButton>
+        
         <TextBlock
              Foreground="Black"
             Padding="0,40,0,0"
@@ -32,6 +28,11 @@
             FontSize="70"
             FontFamily="Times New Roman"
             >Register New Account</TextBlock>
+        <HyperlinkButton x:ConnectionId='2'
+            x:Name="btn_home"
+            Margin="0,50,0,0"
+            FontSize="40"                       
+            >Home</HyperlinkButton>
         <Grid
             Grid.Row="1"
             Grid.Column="0">
@@ -194,12 +195,26 @@
                 FontSize="50"
                 PlaceholderText="Avata Link"
                 ></TextBox>
-            <TextBox
+            <Grid
                 Grid.Row="7"
                 Grid.Column="1"
-                FontSize="50"
-                PlaceholderText="Gender"
-                ></TextBox>
+                >
+                <CheckBox
+                    
+                FontSize="30"
+                >MALE</CheckBox>
+                <CheckBox
+               HorizontalAlignment="Center"
+                FontSize="30"
+                >FAMALE</CheckBox>
+                
+                <CheckBox
+                    IsChecked="True"
+               HorizontalAlignment="right"
+                FontSize="30"
+                >ALL</CheckBox>
+            </Grid>
+            
             <TextBox x:ConnectionId='11'
                 x:Name="email"
                 Grid.Row="8"
@@ -297,13 +312,23 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
+            <TextBlock x:ConnectionId='21'
+                x:Name="vld_dateOfBirth"
+                VerticalAlignment="Center"
+                Grid.Column="2"
+                Grid.Row="9"
+                FontSize="50"
+                Foreground="Red"
+                FontFamily="Times New Roman"
+                TextAlignment="Right"
+                ></TextBlock>
             <Grid
                 Padding="0,0,0,0"
                 Grid.Row="10"
                 Grid.Column="1"
                 >
 
-                <Button x:ConnectionId='21'
+                <Button x:ConnectionId='22'
                         Grid.Column="0"
                     Background="Green"
                     Margin="0,10,0,0"
@@ -312,7 +337,7 @@
                     HorizontalAlignment="Left"
                                         
                         >Register</Button>
-                <Button x:ConnectionId='22'
+                <Button x:ConnectionId='23'
                         Grid.Column="0"
                     Background="red"
                     Margin="0,10,0,0"

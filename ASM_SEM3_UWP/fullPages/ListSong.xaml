@@ -25,12 +25,12 @@
             Padding="0,30,0,0"
             TextAlignment="Center"
             FontSize="80"
-            FontFamily="Times New Roman" SelectionChanged="TextBlock_SelectionChanged"
+            FontFamily="Times New Roman" 
             >List All Song</TextBlock>
         <HyperlinkButton
             x:Name="btn_home"
             Margin="0,50,0,0"
-            FontSize="40"
+            FontSize="40" Click="btn_home_Click"
             >Home
         </HyperlinkButton>
         <Grid

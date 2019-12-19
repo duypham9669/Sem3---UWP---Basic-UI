@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-19T15:46:19.271</Modified>
+      <Modified>2019-12-19T16:13:45.272</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\ASM_SEM3_UWP.exe">
       <PackagePath>entrypoint\ASM_SEM3_UWP.exe</PackagePath>
-      <Modified>2019-12-19T15:46:18.846</Modified>
+      <Modified>2019-12-19T16:13:44.842</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\UWPNuGetPackages\runtime.win10-x86.microsoft.netcore.universalwindowsplatform\6.2.9\runtimes\win10-x86\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -86,31 +86,31 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\ASM_SEM3_UWP.xr.xml">
       <PackagePath>ASM_SEM3_UWP.xr.xml</PackagePath>
-      <Modified>2019-12-19T15:26:42.214</Modified>
+      <Modified>2019-12-19T16:13:44.666</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-19T15:46:18.702</Modified>
+      <Modified>2019-12-19T16:13:44.684</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\ListSong.xbf">
       <PackagePath>fullPages\ListSong.xbf</PackagePath>
-      <Modified>2019-12-19T15:46:18.702</Modified>
+      <Modified>2019-12-19T16:13:44.685</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\Login.xbf">
       <PackagePath>fullPages\Login.xbf</PackagePath>
-      <Modified>2019-12-19T15:46:18.702</Modified>
+      <Modified>2019-12-19T16:13:44.685</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\Register.xbf">
       <PackagePath>fullPages\Register.xbf</PackagePath>
-      <Modified>2019-12-19T15:46:18.698</Modified>
+      <Modified>2019-12-19T16:13:44.680</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\UploadSong.xbf">
       <PackagePath>fullPages\UploadSong.xbf</PackagePath>
-      <Modified>2019-12-19T15:46:18.702</Modified>
+      <Modified>2019-12-19T16:13:44.685</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-19T15:46:18.703</Modified>
+      <Modified>2019-12-19T16:13:44.685</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -122,7 +122,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\Core\ASM_SEM3_UWP.exe">
       <PackagePath>ASM_SEM3_UWP.exe</PackagePath>
-      <Modified>2019-12-19T15:46:19.267</Modified>
+      <Modified>2019-12-19T16:13:45.269</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
