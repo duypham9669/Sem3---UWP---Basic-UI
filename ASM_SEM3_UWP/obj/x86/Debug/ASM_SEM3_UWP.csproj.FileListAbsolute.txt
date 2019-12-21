@@ -62,3 +62,4 @@ D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\obj\x86\Debug\qualifiers.txt.intermediate
 D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\obj\x86\Debug\ProjectArchitectures.txt
 D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\obj\x86\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_636885058160000000.json
+D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\Newtonsoft.Json.dll

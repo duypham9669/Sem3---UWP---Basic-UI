@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="Gray">
 
-
-    <Grid>
+    <ScrollViewer>
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="7*">
@@ -28,7 +28,11 @@
             FontSize="70"
             FontFamily="Times New Roman"
             >Register New Account</TextBlock>
-        <HyperlinkButton x:ConnectionId='2'
+        
+        <TextBlock x:ConnectionId='2'
+            FontSize="40"
+            x:Name="id_data">id:</TextBlock>
+            <HyperlinkButton x:ConnectionId='3'
             x:Name="btn_home"
             Margin="0,50,0,0"
             FontSize="40"                       
@@ -138,7 +142,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 >Date of Birth</TextBlock>
-            <CalendarDatePicker x:ConnectionId='3' 
+            <CalendarDatePicker x:ConnectionId='4' 
                  Grid.Row="9"
                 Grid.Column="1"
                 x:Name="input_birthDay"                                     
@@ -146,56 +150,56 @@
                 FontSize="50"
                 FontFamily="Times New Roman"
                 ></CalendarDatePicker>
-            <TextBox x:ConnectionId='4'
-                x:Name="firstName"
+            <TextBox x:ConnectionId='5'
+                x:Name="input_firstName"
                 Grid.Row="0"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="First Name"
                 ></TextBox>
-            <TextBox x:ConnectionId='5'
-                x:Name="lastName"
+            <TextBox x:ConnectionId='6'
+                x:Name="input_lastName"
                 Grid.Row="1"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Last Name"
                 ></TextBox>
-            <PasswordBox x:ConnectionId='6'
-                x:Name="pass1"
+            <PasswordBox x:ConnectionId='7'
+                x:Name="input_pass1"
                 Grid.Row="2"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Password"
                 ></PasswordBox>
-            <PasswordBox x:ConnectionId='7'
-                x:Name="pass2"
+            <PasswordBox x:ConnectionId='8'
+                x:Name="input_pass2"
                 Grid.Row="3"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Refill Password"
                 ></PasswordBox>
-            <TextBox x:ConnectionId='8'
-                x:Name="address"
+            <TextBox x:ConnectionId='9'
+                x:Name="input_address"
                 Grid.Row="4"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Address"
                 ></TextBox>
-            <TextBox x:ConnectionId='9'
-                x:Name="phone"
+            <TextBox x:ConnectionId='10'
+                x:Name="input_phone"
                 Grid.Row="5"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Phone"
                 ></TextBox>
-            <TextBox x:ConnectionId='10'
-                x:Name="avataLink"
+            <TextBox x:ConnectionId='11'
+                x:Name="input_avataLink"
                 Grid.Row="6"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Avata Link"
                 ></TextBox>
-            <Grid
+            <!--<Grid
                 Grid.Row="7"
                 Grid.Column="1"
                 >
@@ -213,16 +217,23 @@
                HorizontalAlignment="right"
                 FontSize="30"
                 >ALL</CheckBox>
-            </Grid>
-            
-            <TextBox x:ConnectionId='11'
-                x:Name="email"
+            </Grid>-->
+            <TextBox x:ConnectionId='12'
+                x:Name="input_gender"
+                Grid.Row="7"
+                Grid.Column="1"
+                FontSize="50"
+                PlaceholderText="gender: 0 is male, 1 is famale"
+                >
+            </TextBox>
+            <TextBox x:ConnectionId='13'
+                x:Name="input_email"
                 Grid.Row="8"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Email"
                 ></TextBox>
-            <TextBlock x:ConnectionId='12'
+            <TextBlock x:ConnectionId='14'
                 x:Name="vld_firstName"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -232,7 +243,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='13'
+            <TextBlock x:ConnectionId='15'
                 x:Name="vld_lastName"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -242,7 +253,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='14'
+            <TextBlock x:ConnectionId='16'
                 x:Name="vld_pass1"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -252,7 +263,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='15'
+            <TextBlock x:ConnectionId='17'
                 x:Name="vld_pass2"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -262,7 +273,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='16'
+            <TextBlock x:ConnectionId='18'
                 x:Name="vld_address"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -272,7 +283,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='17'
+            <TextBlock x:ConnectionId='19'
                 x:Name="vld_phone"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -282,7 +293,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='18'
+            <TextBlock x:ConnectionId='20'
                 x:Name="vld_avatalink"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -292,7 +303,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='19'
+            <TextBlock x:ConnectionId='21'
                 x:Name="vld_gender"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -302,7 +313,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='20'
+            <TextBlock x:ConnectionId='22'
                 x:Name="vld_email"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -312,7 +323,7 @@
                 FontFamily="Times New Roman"
                 TextAlignment="Right"
                 ></TextBlock>
-            <TextBlock x:ConnectionId='21'
+            <TextBlock x:ConnectionId='23'
                 x:Name="vld_dateOfBirth"
                 VerticalAlignment="Center"
                 Grid.Column="2"
@@ -328,7 +339,7 @@
                 Grid.Column="1"
                 >
 
-                <Button x:ConnectionId='22'
+                <Button x:ConnectionId='24'
                         Grid.Column="0"
                     Background="Green"
                     Margin="0,10,0,0"
@@ -337,7 +348,7 @@
                     HorizontalAlignment="Left"
                                         
                         >Register</Button>
-                <Button x:ConnectionId='23'
+                <Button x:ConnectionId='25'
                         Grid.Column="0"
                     Background="red"
                     Margin="0,10,0,0"
@@ -349,7 +360,7 @@
             </Grid>
         </Grid>
     </Grid>
-
+    </ScrollViewer>
 </Page>
 
 

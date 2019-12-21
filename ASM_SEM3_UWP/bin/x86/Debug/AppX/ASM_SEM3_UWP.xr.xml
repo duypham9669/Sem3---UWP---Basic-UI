@@ -58,17 +58,14 @@
       <RootEvent Name="Click" />
     </RootType>
     <RootType FullName="ASM_SEM3_UWP.fullPages.Login" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootProperty Name="Content" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CalendarDatePicker">
       <RootProperty Name="Margin" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
       <RootEvent Name="DateChanged" />
-    </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.CheckBox">
-      <RootProperty Name="FontSize" />
-      <RootProperty Name="Content" />
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="ASM_SEM3_UWP.fullPages.Register" />
     <RootType FullName="ASM_SEM3_UWP.fullPages.UploadSong" />

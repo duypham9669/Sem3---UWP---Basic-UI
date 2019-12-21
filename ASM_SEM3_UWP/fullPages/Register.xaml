@@ -8,8 +8,8 @@
     mc:Ignorable="d"
     Background="Gray">
 
-
-    <Grid>
+    <ScrollViewer>
+        <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="7*">
@@ -28,7 +28,11 @@
             FontSize="70"
             FontFamily="Times New Roman"
             >Register New Account</TextBlock>
-        <HyperlinkButton
+        
+        <TextBlock
+            FontSize="40"
+            x:Name="id_data">id:</TextBlock>
+            <HyperlinkButton
             x:Name="btn_home"
             Margin="0,50,0,0"
             FontSize="40" Click="btn_home_Click"
@@ -147,55 +151,55 @@
                 FontFamily="Times New Roman"
                 ></CalendarDatePicker>
             <TextBox
-                x:Name="firstName"
+                x:Name="input_firstName"
                 Grid.Row="0"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="First Name"
                 ></TextBox>
             <TextBox
-                x:Name="lastName"
+                x:Name="input_lastName"
                 Grid.Row="1"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Last Name"
                 ></TextBox>
             <PasswordBox
-                x:Name="pass1"
+                x:Name="input_pass1"
                 Grid.Row="2"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Password"
                 ></PasswordBox>
             <PasswordBox
-                x:Name="pass2"
+                x:Name="input_pass2"
                 Grid.Row="3"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Refill Password"
                 ></PasswordBox>
             <TextBox
-                x:Name="address"
+                x:Name="input_address"
                 Grid.Row="4"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Address"
                 ></TextBox>
             <TextBox
-                x:Name="phone"
+                x:Name="input_phone"
                 Grid.Row="5"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Phone"
                 ></TextBox>
             <TextBox
-                x:Name="avataLink"
+                x:Name="input_avataLink"
                 Grid.Row="6"
                 Grid.Column="1"
                 FontSize="50"
                 PlaceholderText="Avata Link"
                 ></TextBox>
-            <Grid
+            <!--<Grid
                 Grid.Row="7"
                 Grid.Column="1"
                 >
@@ -213,10 +217,17 @@
                HorizontalAlignment="right"
                 FontSize="30"
                 >ALL</CheckBox>
-            </Grid>
-            
+            </Grid>-->
             <TextBox
-                x:Name="email"
+                x:Name="input_gender"
+                Grid.Row="7"
+                Grid.Column="1"
+                FontSize="50"
+                PlaceholderText="gender: 0 is male, 1 is famale"
+                >
+            </TextBox>
+            <TextBox
+                x:Name="input_email"
                 Grid.Row="8"
                 Grid.Column="1"
                 FontSize="50"
@@ -349,6 +360,6 @@
             </Grid>
         </Grid>
     </Grid>
-
+    </ScrollViewer>
 </Page>
 
