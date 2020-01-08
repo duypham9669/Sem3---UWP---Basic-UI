@@ -1,0 +1,178 @@
+﻿<Page
+    x:Class="ASM_SEM3_UWP.fullPages.infomation"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM_SEM3_UWP.fullPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:model="using:ASM_SEM3_UWP.model"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush
+                Stretch="UniformToFill"
+                ScrollViewer.ZoomMode="Disabled"
+                Opacity="0.8"
+                ImageSource="/Assets/img/headphone4.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="*">
+            </RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid
+            Grid.Row="0"
+            Grid.Column="0"
+            >
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="3*"></ColumnDefinition>
+                <ColumnDefinition Width="2*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel
+                Grid.Row="0"
+                Grid.Column="1"
+                Margin="0,0,40,0"
+                MaxWidth="400"
+                HorizontalAlignment="Right"
+                >
+                <Image
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                   Stretch="UniformToFill"
+                    Source="https://lh3.googleusercontent.com/E3Ag_p5o0v8RdE_zDElo0RnZ4L0csvre5T1f0nujqtonoZcPAHW6aBbO1sPUladW5cBssEHi0mkCmORDsJjcBBt_PASg83Q03P7Q7mONle3eufc5nz6UllZvZulZeT3A4VrhLzlR5QQSm6f1mC8E_mT8fDPpR0R7TFtN2fBTOlmy35G8Fr2erY5auihQSd2Bz4JDBchYOIc_F6CP7gYgg0MvAQTZ6bWDXNKLIvl4MNcDLikuhruau87pJXVzLKihWqAxwcozgMvdnGfpDXEb7Jy0L2rIKUifft9kwkVtwpiANEjC7NWpm7wkzpco0RxIZ4UADZheStN9W7txWNPKdQ2jXWDhXmq_Rway2BrJrkE2TAgDq26JegHd6XfKSY4UO7TXpaFosfMM55S0n5sh-ScyopGyEMfR1E5c6kskrezSnWPPIcF3sVJfcFBTwTENJMGGtdKYwhfgmfj23i8mJhFhOWfjWxYdwZzQ0Azw2hqHRAMtAbZUi_GSWBgI9Gw9m41_m3m_YFO1r5nVarxZgE5CijICPBM8-_8pKUhbd2uZOtVuvuYKI6Z1nha5ZvYy7MgkXsJGbGAZ39_pSD9MXKMZ9TKY5gGncHO4-vVrQYDl9n_6HA57KXBiOXZ3G2Zey8ANfa2K1l2CnUj-2jdXvmxwmaW4Fr7mTLmw3dfRhr5_mCtvsw55nnk=s640-no"
+                    ></Image>
+            </StackPanel>
+            <Grid
+                Grid.Row="0"
+                Grid.Column="0"
+                Padding="0,40,0,0"
+                >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <StackPanel
+                    
+                    Grid.Row="0"
+                    >
+                    <TextBlock
+              x:Name="name"
+             Foreground="Black"
+            Padding="40,0,0,10"
+            FontSize="60"
+            FontFamily="Adobe Arabic" 
+            >firstName
+                </TextBlock>
+                <StackPanel
+                    Margin="40,0,0,0"
+                    Orientation="Vertical"
+                    >
+                    <NavigationViewItem
+                        x:Name="phone"
+                        Icon="Phone"
+                        Content=""
+                        Foreground="Black"
+                        FontSize="25"
+                        FontFamily="Adobe Arabic" 
+                        />
+                    <NavigationViewItem
+                        x:Name="address"
+                        Icon="Home"
+                        Content=""
+                        Foreground="Black"
+                        FontSize="25"
+                        FontFamily="Adobe Arabic" 
+                        />
+                    <NavigationViewItem
+                        x:Name="email"
+                        Icon="Account"
+                        Content=""
+                        Foreground="Black"
+                        FontSize="25"
+                        FontFamily="Adobe Arabic" 
+                        />
+                </StackPanel>
+                <StackPanel
+                    
+                    Margin="40,40,0,0"
+                    Orientation="Horizontal"
+                    >
+                    <Button
+                        CornerRadius="5"
+                        FontSize="25"
+                        FontFamily="Adobe Arabic"
+                        Background="SteelBlue"
+                        >edit info</Button>
+                </StackPanel>
+                    
+                </StackPanel>
+                <StackPanel
+                       Grid.Row="1"
+                        >
+                    <TextBlock
+                        TextAlignment="Center"
+                        Foreground="Black"
+                        FontSize="40"
+                        FontFamily="Adobe Arabic"
+                        >Top Songs</TextBlock>
+                </StackPanel>
+            </Grid>
+                
+            
+        </Grid>
+
+        <StackPanel
+             Grid.Row="1"
+            Grid.Column="0"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            >
+
+
+            <StackPanel
+            Margin="40,0,0,40"
+            Orientation="Vertical"
+            HorizontalAlignment="Center"
+            >
+                <ListView x:Name="Songs" ItemClick="Songs_OnItemClick" IsItemClickEnabled="True">
+                    <ListView.ItemTemplate>
+                        <DataTemplate x:DataType="model:song">
+                            <Grid Margin="0,12,0,12" AutomationProperties.Name="{x:Bind Name}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" MinWidth="150"/>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{x:Bind Thumbnail}" MaxWidth="100" Stretch="Fill"/>
+                                <StackPanel Margin="12,0,0,0" Grid.Column="1" >
+                                    <TextBlock Text="{x:Bind Name}" FontFamily="Segoe UI" FontSize="14" FontWeight="SemiBold" Style="{ThemeResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="0,0,0,6" LineHeight="20"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{x:Bind Description}" FontFamily="Segoe UI" FontWeight="Normal" LineHeight="20" Style="{ThemeResource BodyTextBlockStyle}" TextTrimming="CharacterEllipsis" Width="350" MaxLines="1"/>
+                                    </StackPanel>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{x:Bind Likes}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,0,0,0"/>
+                                        <TextBlock Text=" Likes" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackPanel>
+        </StackPanel>
+
+
+    </Grid>
+</Page>
+

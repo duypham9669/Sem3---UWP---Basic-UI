@@ -1,0 +1,53 @@
+﻿<Page
+    x:Class="ASM_SEM3_UWP.fullPages.fileHander"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ASM_SEM3_UWP.fullPages"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <StackPanel Orientation="Vertical">
+        <TextBlock
+            FontSize="40"
+            
+            >input File</TextBlock>
+        <TextBlock></TextBlock>
+        <TextBox
+            x:Name="txt_filename"
+            FontSize="30"
+            PlaceholderText="input File Name"
+            ></TextBox>
+        <TextBlock></TextBlock>
+        <TextBlock
+            FontSize="40"
+            >input content file</TextBlock>
+        <TextBlock></TextBlock>
+        <TextBox
+            x:Name="txt_content"
+            FontSize="30"
+            PlaceholderText="content"
+            ></TextBox>
+        <Button
+            FontSize="40"
+            Background="Green"
+            Click="btn_write_Click"
+            >Write</Button>
+        <TextBlock></TextBlock>
+        <TextBlock
+            FontSize="40"
+            >Read file</TextBlock>
+        <TextBlock></TextBlock>
+        <Button
+            Background="Red"
+            FontSize="40"
+            x:Name="btn_show" Click="btn_show_Click"
+            >Show Content File</Button>
+        <TextBlock></TextBlock>
+        <TextBlock
+            x:Name="txt_result"
+            FontSize="40"
+            >content file will show here</TextBlock>
+    </StackPanel>
+</Page>

@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2019-12-21T13:20:21.533</Modified>
+      <Modified>2020-01-07T18:04:38.728</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\ASM_SEM3_UWP.exe">
       <PackagePath>entrypoint\ASM_SEM3_UWP.exe</PackagePath>
-      <Modified>2019-12-21T13:20:20.943</Modified>
+      <Modified>2020-01-07T18:04:38.006</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\duyph\.nuget\packages\newtonsoft.json\12.0.3\lib\netstandard2.0\Newtonsoft.Json.dll">
       <PackagePath>Newtonsoft.Json.dll</PackagePath>
@@ -49,6 +49,50 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
       <Modified>2019-03-18T11:36:56.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\2.jpg">
+      <PackagePath>Assets\2.jpg</PackagePath>
+      <Modified>2020-01-05T07:50:31.055</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\backgroud.jpg">
+      <PackagePath>Assets\backgroud.jpg</PackagePath>
+      <Modified>2020-01-05T06:53:08.874</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\backgroud3.jpg">
+      <PackagePath>Assets\backgroud3.jpg</PackagePath>
+      <Modified>2020-01-05T07:50:31.059</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\background2.jpg">
+      <PackagePath>Assets\background2.jpg</PackagePath>
+      <Modified>2020-01-05T06:53:08.878</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\headphone.jpg">
+      <PackagePath>Assets\headphone.jpg</PackagePath>
+      <Modified>2020-01-05T07:50:31.063</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone2.jpg">
+      <PackagePath>Assets\img\headphone2.jpg</PackagePath>
+      <Modified>2020-01-05T08:08:50.453</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone3.jpg">
+      <PackagePath>Assets\img\headphone3.jpg</PackagePath>
+      <Modified>2020-01-05T08:08:50.484</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone4.jpg">
+      <PackagePath>Assets\img\headphone4.jpg</PackagePath>
+      <Modified>2020-01-05T08:08:50.489</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone5.jpg">
+      <PackagePath>Assets\img\headphone5.jpg</PackagePath>
+      <Modified>2020-01-05T08:08:50.493</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone6.jpg">
+      <PackagePath>Assets\img\headphone6.jpg</PackagePath>
+      <Modified>2020-01-05T08:08:50.497</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone7.jpg">
+      <PackagePath>Assets\img\headphone7.jpg</PackagePath>
+      <Modified>2020-01-05T08:08:50.501</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
@@ -90,31 +134,59 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\ASM_SEM3_UWP.xr.xml">
       <PackagePath>ASM_SEM3_UWP.xr.xml</PackagePath>
-      <Modified>2019-12-21T13:19:08.413</Modified>
+      <Modified>2020-01-07T18:04:37.734</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2019-12-21T13:16:13.088</Modified>
+      <Modified>2020-01-07T17:28:46.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\cameraDemo.xbf">
+      <PackagePath>fullPages\cameraDemo.xbf</PackagePath>
+      <Modified>2020-01-07T17:28:46.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\fileHander.xbf">
+      <PackagePath>fullPages\fileHander.xbf</PackagePath>
+      <Modified>2020-01-07T17:28:46.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\infomation.xbf">
+      <PackagePath>fullPages\infomation.xbf</PackagePath>
+      <Modified>2020-01-07T18:04:37.763</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\ListSong.xbf">
       <PackagePath>fullPages\ListSong.xbf</PackagePath>
-      <Modified>2019-12-21T13:16:13.088</Modified>
+      <Modified>2020-01-07T17:28:46.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\listSongAll.xbf">
+      <PackagePath>fullPages\listSongAll.xbf</PackagePath>
+      <Modified>2020-01-07T17:28:46.549</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\Login.xbf">
       <PackagePath>fullPages\Login.xbf</PackagePath>
-      <Modified>2019-12-21T13:16:13.088</Modified>
+      <Modified>2020-01-07T17:28:46.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\playMusic.xbf">
+      <PackagePath>fullPages\playMusic.xbf</PackagePath>
+      <Modified>2020-01-07T17:28:46.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\Register.xbf">
       <PackagePath>fullPages\Register.xbf</PackagePath>
-      <Modified>2019-12-21T13:20:20.742</Modified>
+      <Modified>2020-01-07T17:28:46.541</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\test.xbf">
+      <PackagePath>fullPages\test.xbf</PackagePath>
+      <Modified>2020-01-07T17:28:46.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\UploadSong.xbf">
       <PackagePath>fullPages\UploadSong.xbf</PackagePath>
-      <Modified>2019-12-21T13:16:13.089</Modified>
+      <Modified>2020-01-07T17:28:46.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2019-12-21T13:16:13.089</Modified>
+      <Modified>2020-01-07T17:28:46.550</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\navigation.xbf">
+      <PackagePath>navigation.xbf</PackagePath>
+      <Modified>2020-01-07T17:28:46.550</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -122,11 +194,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2019-12-21T13:09:18.898</Modified>
+      <Modified>2020-01-07T16:22:56.491</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\Core\ASM_SEM3_UWP.exe">
       <PackagePath>ASM_SEM3_UWP.exe</PackagePath>
-      <Modified>2019-12-21T13:20:21.526</Modified>
+      <Modified>2020-01-07T18:04:38.716</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

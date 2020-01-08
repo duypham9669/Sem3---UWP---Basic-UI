@@ -119,14 +119,32 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="fullPages\cameraDemo.xaml.cs">
+      <DependentUpon>cameraDemo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fullPages\fileHander.xaml.cs">
+      <DependentUpon>fileHander.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fullPages\infomation.xaml.cs">
+      <DependentUpon>infomation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="fullPages\ListSong.xaml.cs">
       <DependentUpon>ListSong.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fullPages\listSongAll.xaml.cs">
+      <DependentUpon>listSongAll.xaml</DependentUpon>
     </Compile>
     <Compile Include="fullPages\Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
+    <Compile Include="fullPages\playMusic.xaml.cs">
+      <DependentUpon>playMusic.xaml</DependentUpon>
+    </Compile>
     <Compile Include="fullPages\Register.xaml.cs">
       <DependentUpon>Register.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="fullPages\test.xaml.cs">
+      <DependentUpon>test.xaml</DependentUpon>
     </Compile>
     <Compile Include="fullPages\UploadSong.xaml.cs">
       <DependentUpon>UploadSong.xaml</DependentUpon>
@@ -134,14 +152,21 @@
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="model\checkStatus.cs" />
     <Compile Include="model\song.cs" />
     <Compile Include="model\user.cs" />
+    <Compile Include="navigation.xaml.cs">
+      <DependentUpon>navigation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="service\createSongService.cs" />
+    <Compile Include="service\IHandleService.cs" />
+    <Compile Include="service\infomationService.cs" />
     <Compile Include="service\listSongService.cs" />
     <Compile Include="service\loginService.cs" />
     <Compile Include="service\registerService.cs" />
     <Compile Include="service\serviceIpml\createSongServiceImpl.cs" />
+    <Compile Include="service\serviceIpml\FilehanderService.cs" />
     <Compile Include="service\serviceIpml\listSongServiceImpl.cs" />
     <Compile Include="service\serviceIpml\loginServiceImpl.cs" />
     <Compile Include="service\serviceIpml\registerServiceImpl.cs" />
@@ -152,6 +177,17 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\2.jpg" />
+    <Content Include="Assets\backgroud.jpg" />
+    <Content Include="Assets\backgroud3.jpg" />
+    <Content Include="Assets\background2.jpg" />
+    <Content Include="Assets\headphone.jpg" />
+    <Content Include="Assets\img\headphone2.jpg" />
+    <Content Include="Assets\img\headphone3.jpg" />
+    <Content Include="Assets\img\headphone4.jpg" />
+    <Content Include="Assets\img\headphone5.jpg" />
+    <Content Include="Assets\img\headphone6.jpg" />
+    <Content Include="Assets\img\headphone7.jpg" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -166,7 +202,23 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="fullPages\cameraDemo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fullPages\fileHander.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fullPages\infomation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="fullPages\ListSong.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fullPages\listSongAll.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -174,7 +226,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="fullPages\playMusic.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="fullPages\Register.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="fullPages\test.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,6 +245,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="navigation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

@@ -20,6 +20,7 @@ using Newtonsoft.Json;
 using System.Net.Http;
 using System.Text;
 using System.Diagnostics;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,6 +33,8 @@ namespace ASM_SEM3_UWP.fullPages
     {
         private registerService registerservice;
         private DateTime _birthDay=DateTime.Now;
+        private int gender_ = 2;
+
         public Register()
         {
             this.InitializeComponent();
@@ -40,14 +43,36 @@ namespace ASM_SEM3_UWP.fullPages
 
         private void btn_Login(object sender, RoutedEventArgs e)
         {
-            this.Frame.Navigate(typeof(fullPages.Login));
+            this.Frame.Navigate(typeof(fullPages.Login), "login");
+            //NavView_Navigate("MUSIC TOWN", args.RecommendedNavigationTransitionInfo);
+
 
         }
-        
+
         private void btn_Register(object sender, RoutedEventArgs e)
         {
             validateFrom();
 
+        }
+        private void Gender_Choose(object sender, RoutedEventArgs e)
+        {
+            var chooseRadioButton = (RadioButton)sender;
+            if (chooseRadioButton == null)
+            {
+                return;
+            }
+            switch (chooseRadioButton.Tag)
+            {
+                case "Male":
+                    gender_ = 1;
+                    break;
+                case "Female":
+                    gender_ = 0;
+                    break;
+                case "Other":
+                    gender_ = 2;
+                    break;
+            }
         }
         private void Birthday_OnDateChanged(CalendarDatePicker sender, CalendarDatePickerDateChangedEventArgs args)
         {
@@ -65,7 +90,9 @@ namespace ASM_SEM3_UWP.fullPages
             String address_ = input_address.Text;
             String phone_ = input_phone.Text;
             String avataLink_ = input_avataLink.Text;
-            int gender_ = Convert.ToInt32(input_gender.Text);
+
+
+
             Boolean check = true;
             String email_ = input_email.Text;
             if(firstName_ is null || firstName_.Length < 1)
@@ -168,7 +195,7 @@ namespace ASM_SEM3_UWP.fullPages
                 "https://2-dot-backup-server-002.appspot.com/_api/v2/members",contendSend);
             var dataRespon = await response.Content.ReadAsStringAsync();
             var memberRespon = JsonConvert.DeserializeObject<user>(dataRespon);
-            id_data.Text = memberRespon.id;
+            //id_data.Text = memberRespon.id;
             Debug.WriteLine(memberRespon.id);
         }
     }

@@ -37,6 +37,39 @@
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\bin\10.0.18362.0\XamlCompiler\Microsoft.UI.Xaml.Markup.winmd">
       <PackagePath>Microsoft.UI.Xaml.Markup.winmd</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\2.jpg">
+      <PackagePath>Assets\2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\backgroud.jpg">
+      <PackagePath>Assets\backgroud.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\backgroud3.jpg">
+      <PackagePath>Assets\backgroud3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\background2.jpg">
+      <PackagePath>Assets\background2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\headphone.jpg">
+      <PackagePath>Assets\headphone.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone2.jpg">
+      <PackagePath>Assets\img\headphone2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone3.jpg">
+      <PackagePath>Assets\img\headphone3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone4.jpg">
+      <PackagePath>Assets\img\headphone4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone5.jpg">
+      <PackagePath>Assets\img\headphone5.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone6.jpg">
+      <PackagePath>Assets\img\headphone6.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\img\headphone7.jpg">
+      <PackagePath>Assets\img\headphone7.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
@@ -73,20 +106,41 @@
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\cameraDemo.xbf">
+      <PackagePath>fullPages\cameraDemo.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\fileHander.xbf">
+      <PackagePath>fullPages\fileHander.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\infomation.xbf">
+      <PackagePath>fullPages\infomation.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\ListSong.xbf">
       <PackagePath>fullPages\ListSong.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\listSongAll.xbf">
+      <PackagePath>fullPages\listSongAll.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\Login.xbf">
       <PackagePath>fullPages\Login.xbf</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\playMusic.xbf">
+      <PackagePath>fullPages\playMusic.xbf</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\Register.xbf">
       <PackagePath>fullPages\Register.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\test.xbf">
+      <PackagePath>fullPages\test.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\fullPages\UploadSong.xbf">
       <PackagePath>fullPages\UploadSong.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\bin\x86\Debug\navigation.xbf">
+      <PackagePath>navigation.xbf</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\10.0.18362.0\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>

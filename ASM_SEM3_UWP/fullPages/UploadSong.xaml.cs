@@ -43,7 +43,6 @@ namespace ASM_SEM3_UWP.fullPages
         private void btn_home_Click(object sender, RoutedEventArgs e)
         {
             this.Frame.Navigate(typeof(MainPage));
-
         }
     }
 }

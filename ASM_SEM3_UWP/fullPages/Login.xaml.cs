@@ -1,11 +1,17 @@
-﻿using System;
+﻿using ASM_SEM3_UWP.model;
+using ASM_SEM3_UWP.service;
+using ASM_SEM3_UWP.service.serviceIpml;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,9 +29,13 @@ namespace ASM_SEM3_UWP.fullPages
     /// </summary>
     public sealed partial class Login : Page
     {
+        public static string token;
+
+        private loginServiceImpl loginService = new loginServiceImpl();
         public Login()
         {
             this.InitializeComponent();
+            readDataFile();
         }
 
         private void btn_register(object sender, RoutedEventArgs e)
@@ -33,36 +43,78 @@ namespace ASM_SEM3_UWP.fullPages
             this.Frame.Navigate(typeof(fullPages.Register));
 
         }
-
-        private void btn_Submit(object sender, RoutedEventArgs e)
+        private async void btn_Submit(object sender, RoutedEventArgs e)
         {
-
+            await validateAsync();
         }
-
-        private void btn_home_Click(object sender, RoutedEventArgs e)
+        private void checkRemember(String email, String pass)
         {
-            this.Frame.Navigate(typeof(MainPage));
-
+            //CheckBox checkbox = new CheckBox(remember);
+            if (remember.IsChecked == true)
+            {
+                writeDataUser(email, pass);
+            }
         }
-        private void validate()
+       
+        private async System.Threading.Tasks.Task validateAsync()
         {
             String email2 = email.Text;
             String pass2 = pass.Password.ToString();
+            Boolean check = true;
             if (email2 is null || email2.Length < 11)
             {
                 vld_email.Text = "input email";
+                check = false;
             }
             bool match;
-
             if ((match = Regex.IsMatch(email2, "@gmail.com")) == false)
             {
                 vld_email.Text = "input again email";
+                check = false;
             }
             if (pass2 is null || pass2.Length < 1)
             {
                 vld_pass.Text = "input pass";
+                check = false;
             }
-
+            if (check == true)
+            {
+                await loginAsync(email2, pass2);
+                checkRemember(email2, pass2);
+                checkStatus.status = true;
+            }
         }
+        private async System.Threading.Tasks.Task loginAsync(String email, String pass)
+        {
+            token = await this.loginService.LoginTask(email, pass);
+            await FilehanderService.WriteFile("token.txt", token);
+            navigation.currentLayout.checkToken();
+            this.Frame.Navigate(typeof(MainPage));
+        }
+        private async void writeDataUser(String email, String pass)
+        {
+            FilehanderService.WriteFile("email", email);
+            FilehanderService.WriteFile("pass", pass);
+        }
+
+        private async void readDataFile()
+        {
+            bool x = await isFilePresent("email");
+            Debug.WriteLine("X===" + x);
+            if (x == true)
+            {
+                var resultEmail = await FilehanderService.Readfile("email");
+                email.Text = resultEmail;
+                var resultPass = await FilehanderService.Readfile("pass");
+                pass.Password = resultPass;
+            }
+        }
+        public async Task<bool> isFilePresent(string fileName)
+        {
+            var item = await ApplicationData.Current.LocalFolder.TryGetItemAsync(fileName);
+            return item != null;
+        }
+
     }
-}
+    }
+

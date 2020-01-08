@@ -1,10 +1,14 @@
-﻿using System;
+﻿using ASM_SEM3_UWP.model;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.Storage;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -25,30 +29,30 @@ namespace ASM_SEM3_UWP
         public MainPage()
         {
             this.InitializeComponent();
-        }
 
-        private void btn_register(object sender, RoutedEventArgs e)
+        }
+        private async void reloadItem()
         {
-            this.Frame.Navigate(typeof(fullPages.Register));
+            bool x = await isFilePresent("token.txt");
+            Debug.WriteLine("X===========" + x);
+            if (x == true)
+            {
+                checkStatus.status = true;
+            }
 
         }
 
-        private void btn_login(object sender, RoutedEventArgs e)
+        public async Task<bool> isFilePresent(string fileName)
         {
-            this.Frame.Navigate(typeof(fullPages.Login));
-
+            var item = await ApplicationData.Current.LocalFolder.TryGetItemAsync(fileName);
+            return item != null;
         }
 
-        private void btn_uploadSong(object sender, RoutedEventArgs e)
+
+        private void run()
         {
-            this.Frame.Navigate(typeof(fullPages.UploadSong));
-
         }
+        
 
-        private void btn_allSong(object sender, RoutedEventArgs e)
-        {
-            this.Frame.Navigate(typeof(fullPages.ListSong));
-
-        }
     }
 }

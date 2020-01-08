@@ -5,95 +5,14 @@
     xmlns:local="using:ASM_SEM3_UWP"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d"
-    Background="Gray">
-
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"></RowDefinition>
-            <RowDefinition Height="5*">
-
-            </RowDefinition>
-
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"></ColumnDefinition>
-        </Grid.ColumnDefinitions>
+>
+    <Grid
+        Background="#f9f7f0" 
+        >
         <TextBlock
-             Foreground="Black"
-            Padding="0,40,0,0"
-            TextAlignment="Center"
-            FontSize="70"
-            FontFamily="Times New Roman"
-            >Wellcome my supper App</TextBlock>
-        <Grid
-            Grid.Row="1"
-            Grid.Column="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-                <ColumnDefinition Width="*"></ColumnDefinition>
-
-            </Grid.ColumnDefinitions>
-            <Button x:ConnectionId='2'
-                Width="450"
-                        Grid.Column="1"
-                    Background="Aquamarine"
-                    Margin="0,10,0,0"
-                    FontSize="60"
-                    FontFamily="Times New Roman"
-                    HorizontalAlignment="Center"
-                                        
-                        >Register</Button>
-            <Button x:ConnectionId='3'
-                Width="450"
-                        Grid.Column="1"
-                    Grid.Row="1"
-                    Background="Beige"
-                    Margin="0,10,0,0"
-                    FontSize="60"
-                    FontFamily="Times New Roman"
-                    HorizontalAlignment="Center"
-                                     
-                        >Login</Button>
-            <Button x:ConnectionId='4'
-                Width="450"
-                        Grid.Column="1"
-                    Grid.Row="2"
-                    Background="BlueViolet"
-                    Margin="0,10,0,0"
-                    FontSize="60"
-                    FontFamily="Times New Roman"
-                    HorizontalAlignment="Center"
-                                          
-                        >Up Load Song</Button>
-            <Button x:ConnectionId='5'
-                Width="450"
-                        Grid.Column="1"
-                    Grid.Row="3"
-                    Background="Cyan"
-                    Margin="0,10,0,0"
-                    FontSize="60"
-                    FontFamily="Times New Roman"
-                    HorizontalAlignment="Center"
-                                       
-                        >List All Song</Button>
-
-
-            
-
-            
-        </Grid>
+            Foreground="Black"
+            FontSize="25" FontFamily="Adobe Caslon Pro"
+            >Most Popular</TextBlock>
     </Grid>
-
 </Page>
 
