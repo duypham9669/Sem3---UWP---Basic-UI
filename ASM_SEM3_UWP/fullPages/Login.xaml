@@ -101,6 +101,13 @@
                     x:Name="remember"
                     Margin="0,20,0,0"
                     >Remember me</CheckBox>
+                <TextBlock
+                    TextAlignment="Center"
+                    x:Name="loginfail"
+                FontSize="20"
+                Foreground="red"
+                FontFamily="Adobe Arabic"
+                    ></TextBlock>
 
                 <Grid
                 Padding="0,0,0,0"

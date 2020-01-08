@@ -57,7 +57,7 @@
                  Grid.Row="0"
                 Grid.Column="1"
                 BorderBrush="White" BorderThickness="0,0,0,1">
-                    <TextBox x:ConnectionId='9'
+                    <TextBox x:ConnectionId='10'
                     FontFamily="Adobe Arabic"
                     Margin="0,10,0,0"
                     x:Name="email"
@@ -79,7 +79,7 @@
                  Grid.Row="0"
                 Grid.Column="1"
                 BorderBrush="White" BorderThickness="0,0,0,1">
-                    <PasswordBox x:ConnectionId='8'
+                    <PasswordBox x:ConnectionId='9'
                 FontFamily="Adobe Arabic"
                 x:Name="pass"
                 Grid.Row="1"
@@ -101,13 +101,20 @@
                     x:Name="remember"
                     Margin="0,20,0,0"
                     >Remember me</CheckBox>
+                <TextBlock x:ConnectionId='6'
+                    TextAlignment="Center"
+                    x:Name="loginfail"
+                FontSize="20"
+                Foreground="red"
+                FontFamily="Adobe Arabic"
+                    ></TextBlock>
 
                 <Grid
                 Padding="0,0,0,0"
                 Grid.Row="2"
                 Grid.Column="1"
                 >
-                    <Button x:ConnectionId='6'
+                    <Button x:ConnectionId='7'
                     Grid.Column="0"
                     Background="#bce1da"
                     Margin="0,20,0,0"
@@ -116,7 +123,7 @@
                     HorizontalAlignment="Left"
                                       
                         >Login</Button>
-                    <Button x:ConnectionId='7'
+                    <Button x:ConnectionId='8'
                         Grid.Column="0"
                     Background="Pink"
                     Margin="0,20,0,0"

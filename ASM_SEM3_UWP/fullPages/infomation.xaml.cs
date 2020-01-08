@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ASM_SEM3_UWP.model;
+using ASM_SEM3_UWP.service;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,17 +24,31 @@ namespace ASM_SEM3_UWP.fullPages
     /// </summary>
     public sealed partial class infomation : Page
     {
+        infomationService infomationservice = new infomationService();
+        private song currentSong;
         public infomation()
         {
+
             this.InitializeComponent();
             run();
         }
-        private void run()
+        private async void FrameworkElement_OnLoaded(object sender, RoutedEventArgs e)
         {
-            phone.Content = " this is phone";
-            address.Content = "this is address";
-            email.Content = "this is email";
-        }
+            Songs.ItemsSource = await infomationservice.GetListSong(Login.token);
 
+
+        }
+        private async System.Threading.Tasks.Task run()
+        {
+            user member = await this.infomationservice.GetMemberInformation(Login.token);
+            memberName.Text = member.firstName +" "+ member.lastName;
+            memberAddress.Text = member.address;
+            memberPhone.Text = member.phone;
+            memberEmail.Text = member.email;
+        }
+        private void Songs_OnItemClick(object sender, ItemClickEventArgs e)
+        {
+          
+        }
     }
 }

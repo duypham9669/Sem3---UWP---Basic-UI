@@ -68,9 +68,9 @@
                 
                 <NavigationViewItemHeader x:ConnectionId='3' x:Name="MainPagesHeader"
                                            Content="Main pages"/>
-                <NavigationViewItem Tag="user" Icon="OtherUser" Content="Infomation"/>
+                <NavigationViewItem x:ConnectionId='4' Visibility="Collapsed" x:Name="infomation" Tag="user" Icon="OtherUser" Content="Infomation"/>
 
-                <NavigationViewItem x:ConnectionId='4'  x:Name="music2" Tag="music" Icon="Audio" Content="My Music"/>
+                <NavigationViewItem x:ConnectionId='5'  x:Name="music2" Tag="music" Icon="Audio" Content="My Music"/>
                 
                 <NavigationViewItem Tag="Newmusic" Icon="Rotate" Content="New Playlist Music"/>
 
@@ -82,8 +82,8 @@
                         <FontIcon FontFamily="Segoe MDL2 Assets" Glyph="&#xE11C;"/>
                     </NavigationViewItem.Icon>
                 </NavigationViewItem>
-                <NavigationViewItem x:ConnectionId='5' Visibility="Collapsed" x:Name="Login2" Tag="Login" Icon="Contact" Content="Login"/>
-                <NavigationViewItem x:ConnectionId='6' Visibility="Collapsed" x:Name="LogOut" Tag="LogOut" Icon="Share" Content="Log Out"/>
+                <NavigationViewItem x:ConnectionId='6' Visibility="Collapsed" x:Name="Login2" Tag="Login" Icon="Contact" Content="Login"/>
+                <NavigationViewItem x:ConnectionId='7' Visibility="Collapsed" x:Name="LogOut" Tag="LogOut" Icon="Share" Content="Log Out"/>
 
 
 
@@ -93,7 +93,7 @@
             <ScrollViewer
                  HorizontalScrollBarVisibility="Auto" 
                   VerticalScrollBarVisibility="Auto">
-                <Frame x:ConnectionId='7' x:Name="ContentFrame" Padding="0,0,0,0" IsTabStop="True"
+                <Frame x:ConnectionId='8' x:Name="ContentFrame" Padding="0,0,0,0" IsTabStop="True"
                                                                    />
             </ScrollViewer>
         </NavigationView>
@@ -102,7 +102,7 @@
             <VisualStateGroup>
                 <VisualState>
                    <VisualState.StateTriggers>
-                        <AdaptiveTrigger x:ConnectionId='8'
+                        <AdaptiveTrigger x:ConnectionId='9'
                                                                                    />
                     </VisualState.StateTriggers>
                     <VisualState.Setters>

@@ -86,15 +86,24 @@ namespace ASM_SEM3_UWP.fullPages
         }
         private async System.Threading.Tasks.Task loginAsync(String email, String pass)
         {
+            
             token = await this.loginService.LoginTask(email, pass);
+            if (token != null)
+            {
             await FilehanderService.WriteFile("token.txt", token);
             navigation.currentLayout.checkToken();
             this.Frame.Navigate(typeof(MainPage));
+            }
+            else
+            {
+                loginfail.Text = "Invalid information, Please login again!";
+            }
+
         }
         private async void writeDataUser(String email, String pass)
         {
-            FilehanderService.WriteFile("email", email);
-            FilehanderService.WriteFile("pass", pass);
+            await FilehanderService.WriteFile("email", email);
+            await FilehanderService.WriteFile("pass", pass);
         }
 
         private async void readDataFile()

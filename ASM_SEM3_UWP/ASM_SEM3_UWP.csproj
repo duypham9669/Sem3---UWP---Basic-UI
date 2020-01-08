@@ -154,6 +154,7 @@
     </Compile>
     <Compile Include="model\checkStatus.cs" />
     <Compile Include="model\song.cs" />
+    <Compile Include="model\songResult.cs" />
     <Compile Include="model\user.cs" />
     <Compile Include="navigation.xaml.cs">
       <DependentUpon>navigation.xaml</DependentUpon>
@@ -161,6 +162,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="service\createSongService.cs" />
     <Compile Include="service\IHandleService.cs" />
+    <Compile Include="service\infomation.cs" />
     <Compile Include="service\infomationService.cs" />
     <Compile Include="service\listSongService.cs" />
     <Compile Include="service\loginService.cs" />
@@ -178,6 +180,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\2.jpg" />
+    <Content Include="Assets\album\album1.jpg" />
+    <Content Include="Assets\album\album2.jpg" />
+    <Content Include="Assets\album\album3.jpg" />
+    <Content Include="Assets\album\album4.jpg" />
+    <Content Include="Assets\album\album5.jpg" />
     <Content Include="Assets\backgroud.jpg" />
     <Content Include="Assets\backgroud3.jpg" />
     <Content Include="Assets\background2.jpg" />

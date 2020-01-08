@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
@@ -13,6 +14,8 @@ namespace ASM_SEM3_UWP.service
     class infomationService
     {
         private static readonly string MemberInformationApiUrl = "https://2-dot-backup-server-002.appspot.com/_api/v2/members/information";
+        private static readonly string uriGetSong = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs";
+
         public async Task<user> GetMemberInformation(string token)
         {
             // gọi shipper
@@ -28,5 +31,23 @@ namespace ASM_SEM3_UWP.service
             }
             return null;
         }
+        public async Task<ObservableCollection<song>> GetListSong(string token)
+        {
+            ObservableCollection<song> list = new ObservableCollection<song>();
+            // gọi shipper
+            HttpClient httpClient = new HttpClient();
+            httpClient.DefaultRequestHeaders.Add("Authorization", "Basic " + token);
+            // gửi đến đây (link), món quà này (contentToSend), chờ quá trình gửi thành công, thì lấy xác nhận từ người nhận.
+            var response = await httpClient.GetAsync(uriGetSong);
+            // đọc dữ liệu response từ người nhận.
+            if (response.StatusCode == HttpStatusCode.OK)
+            {
+                var stringContent = await response.Content.ReadAsStringAsync();
+                list=JsonConvert.DeserializeObject<ObservableCollection<song>>(stringContent);
+                return list;
+            }
+            return null;
+        }
+
     }
 }

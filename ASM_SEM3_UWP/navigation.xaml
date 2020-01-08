@@ -68,7 +68,7 @@
                 
                 <NavigationViewItemHeader x:Name="MainPagesHeader"
                                            Content="Main pages"/>
-                <NavigationViewItem Tag="user" Icon="OtherUser" Content="Infomation"/>
+                <NavigationViewItem Visibility="Collapsed" x:Name="infomation" Tag="user" Icon="OtherUser" Content="Infomation"/>
 
                 <NavigationViewItem  x:Name="music2" Tag="music" Icon="Audio" Content="My Music"/>
                 

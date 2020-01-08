@@ -8,11 +8,13 @@ namespace ASM_SEM3_UWP.model
 {
     class song
     {
-        public String author { get; set; }
+        public long id { get; set; }
+        public String name { get; set; }
+        public String description { get; set; }
         public String singer { get; set; }
-        public String songName { get; set; }
-        public String Thumbnail { get; set; }
-        public String linkSong { get; set; }
+        public String author { get; set; }
+        public String thumbnail { get; set; }
+        public String link { get; set; }
 
     }
 }

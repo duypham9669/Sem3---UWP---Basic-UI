@@ -1,4 +1,5 @@
-﻿using ASM_SEM3_UWP.model;
+﻿using ASM_SEM3_UWP.fullPages;
+using ASM_SEM3_UWP.model;
 using ASM_SEM3_UWP.service.serviceIpml;
 using System;
 using System.Collections.Generic;
@@ -60,18 +61,21 @@ namespace ASM_SEM3_UWP
     };
 
 
-
+        
         public async void checkToken()
         {
             var tokenFile = await ApplicationData.Current.LocalFolder.TryGetItemAsync("token.txt");
             if (tokenFile != null)
             {
                 LogOut.Visibility = Visibility.Visible;
+                infomation.Visibility = Visibility.Visible;
                 Login2.Visibility = Visibility.Collapsed;
+                Login.token = await FilehanderService.Readfile("token.txt");
             }
             else
             {
                 Login2.Visibility = Visibility.Visible;
+                infomation.Visibility = Visibility.Collapsed;
                 LogOut.Visibility = Visibility.Collapsed;
             }
         }

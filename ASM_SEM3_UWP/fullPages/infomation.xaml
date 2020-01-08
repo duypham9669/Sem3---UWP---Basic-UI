@@ -9,14 +9,16 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <Grid.Background>
+    <Grid
+        Background="#ebf0f6"
+        >
+        <!--<Grid.Background>
             <ImageBrush
                 Stretch="UniformToFill"
                 ScrollViewer.ZoomMode="Disabled"
                 Opacity="0.8"
                 ImageSource="/Assets/img/headphone4.jpg"/>
-        </Grid.Background>
+        </Grid.Background>-->
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
             <RowDefinition Height="*">
@@ -31,7 +33,9 @@
             Grid.Column="0"
             >
             <Grid.RowDefinitions>
-                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="2*"></RowDefinition>
+                <RowDefinition Height="3*"></RowDefinition>
+
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="3*"></ColumnDefinition>
@@ -42,13 +46,12 @@
                 Grid.Column="1"
                 Margin="0,0,40,0"
                 MaxWidth="400"
-                HorizontalAlignment="Right"
+                HorizontalAlignment="Center"
                 >
                 <Image
-                    HorizontalAlignment="Right"
                     VerticalAlignment="Bottom"
                    Stretch="UniformToFill"
-                    Source="https://lh3.googleusercontent.com/E3Ag_p5o0v8RdE_zDElo0RnZ4L0csvre5T1f0nujqtonoZcPAHW6aBbO1sPUladW5cBssEHi0mkCmORDsJjcBBt_PASg83Q03P7Q7mONle3eufc5nz6UllZvZulZeT3A4VrhLzlR5QQSm6f1mC8E_mT8fDPpR0R7TFtN2fBTOlmy35G8Fr2erY5auihQSd2Bz4JDBchYOIc_F6CP7gYgg0MvAQTZ6bWDXNKLIvl4MNcDLikuhruau87pJXVzLKihWqAxwcozgMvdnGfpDXEb7Jy0L2rIKUifft9kwkVtwpiANEjC7NWpm7wkzpco0RxIZ4UADZheStN9W7txWNPKdQ2jXWDhXmq_Rway2BrJrkE2TAgDq26JegHd6XfKSY4UO7TXpaFosfMM55S0n5sh-ScyopGyEMfR1E5c6kskrezSnWPPIcF3sVJfcFBTwTENJMGGtdKYwhfgmfj23i8mJhFhOWfjWxYdwZzQ0Azw2hqHRAMtAbZUi_GSWBgI9Gw9m41_m3m_YFO1r5nVarxZgE5CijICPBM8-_8pKUhbd2uZOtVuvuYKI6Z1nha5ZvYy7MgkXsJGbGAZ39_pSD9MXKMZ9TKY5gGncHO4-vVrQYDl9n_6HA57KXBiOXZ3G2Zey8ANfa2K1l2CnUj-2jdXvmxwmaW4Fr7mTLmw3dfRhr5_mCtvsw55nnk=s640-no"
+                    Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
                     ></Image>
             </StackPanel>
             <Grid
@@ -68,42 +71,63 @@
                     Grid.Row="0"
                     >
                     <TextBlock
-              x:Name="name"
+              x:Name="memberName"
              Foreground="Black"
             Padding="40,0,0,10"
             FontSize="60"
             FontFamily="Adobe Arabic" 
-            >firstName
+            >name
                 </TextBlock>
                 <StackPanel
                     Margin="40,0,0,0"
                     Orientation="Vertical"
                     >
-                    <NavigationViewItem
-                        x:Name="phone"
-                        Icon="Phone"
-                        Content=""
+                        <StackPanel
+                            Orientation="Horizontal"
+                            >
+                            <SymbolIcon
+                                Symbol="CellPhone" IsHitTestVisible="False" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
+                            <TextBlock
+                         x:Name="memberPhone"
+                        Foreground="Black"
+                        FontSize="25"
+                        FontFamily="Adobe Arabic"
+                        >
+                            </TextBlock>
+                        </StackPanel>
+
+
+                        <StackPanel
+                            Orientation="Horizontal"
+                            >
+                            <SymbolIcon
+                                Symbol="Home" IsHitTestVisible="False" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
+                            <TextBlock
+                        IsRightTapEnabled="False"
+                            x:Name="memberAddress"
                         Foreground="Black"
                         FontSize="25"
                         FontFamily="Adobe Arabic" 
                         />
-                    <NavigationViewItem
-                        x:Name="address"
-                        Icon="Home"
-                        Content=""
+                        </StackPanel>
+
+                        <StackPanel
+                            Orientation="Horizontal"
+                            >
+                            <SymbolIcon
+                                Symbol="Mail" IsHitTestVisible="False" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
+
+                            <TextBlock
+                        x:Name="memberEmail"
                         Foreground="Black"
                         FontSize="25"
                         FontFamily="Adobe Arabic" 
-                        />
-                    <NavigationViewItem
-                        x:Name="email"
-                        Icon="Account"
-                        Content=""
-                        Foreground="Black"
-                        FontSize="25"
-                        FontFamily="Adobe Arabic" 
-                        />
-                </StackPanel>
+                        >
+                            
+                        </TextBlock>
+                        </StackPanel>
+                        
+                    </StackPanel>
                 <StackPanel
                     
                     Margin="40,40,0,0"
@@ -136,39 +160,168 @@
         <StackPanel
              Grid.Row="1"
             Grid.Column="0"
-            Orientation="Horizontal"
-            HorizontalAlignment="Center"
+             Orientation="Vertical"
+
             >
-
-
+            <!--<Grid.Background>
+                <ImageBrush
+                Stretch="UniformToFill"
+                ScrollViewer.ZoomMode="Disabled"
+                Opacity="0.8"
+                ImageSource="/Assets/img/headphone4.jpg"/>
+            </Grid.Background>-->
             <StackPanel
+            Height="500"
             Margin="40,0,0,40"
             Orientation="Vertical"
             HorizontalAlignment="Center"
-            >
-                <ListView x:Name="Songs" ItemClick="Songs_OnItemClick" IsItemClickEnabled="True">
-                    <ListView.ItemTemplate>
-                        <DataTemplate x:DataType="model:song">
-                            <Grid Margin="0,12,0,12" AutomationProperties.Name="{x:Bind Name}">
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="Auto" MinWidth="150"/>
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                <Image Source="{x:Bind Thumbnail}" MaxWidth="100" Stretch="Fill"/>
-                                <StackPanel Margin="12,0,0,0" Grid.Column="1" >
-                                    <TextBlock Text="{x:Bind Name}" FontFamily="Segoe UI" FontSize="14" FontWeight="SemiBold" Style="{ThemeResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="0,0,0,6" LineHeight="20"/>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{x:Bind Description}" FontFamily="Segoe UI" FontWeight="Normal" LineHeight="20" Style="{ThemeResource BodyTextBlockStyle}" TextTrimming="CharacterEllipsis" Width="350" MaxLines="1"/>
-                                    </StackPanel>
-                                    <StackPanel Orientation="Horizontal">
-                                        <TextBlock Text="{x:Bind Likes}" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}" Margin="0,0,0,0"/>
-                                        <TextBlock Text=" Likes" FontFamily="Segoe UI" FontSize="12" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
-                                    </StackPanel>
-                                </StackPanel>
-                            </Grid>
-                        </DataTemplate>
+            Loaded="FrameworkElement_OnLoaded">
+                <ScrollViewer
+                    VerticalScrollBarVisibility="Visible"
+                    >
+                    <ListView x:Name="Songs" ItemClick="Songs_OnItemClick" IsItemClickEnabled="True">
+                       
+                        <ListView.ItemTemplate>
+                        <DataTemplate  x:DataType="model:song">
+                                <Border Name="Border" BorderBrush="Transparent" BorderThickness="2">
+                                    <Grid
+                                Margin="0,12,0,12" AutomationProperties.Name="{x:Bind name}">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto" MinWidth="150"/>
+                                            <ColumnDefinition Width="*" />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="{x:Bind thumbnail}" MaxWidth="100" Stretch="Fill"/>
+                                        <StackPanel 
+                                    Margin="12,0,0,0" 
+                                    Grid.Column="1" 
+                                    Orientation="Horizontal"
+                                    >
+                                            <TextBlock
+                                        Width="350"
+                                         VerticalAlignment="Center"
+                                        TextAlignment="Left"
+                                        FontFamily="Adobe Arabic"
+                                        Foreground="Black"
+                                        Text="{x:Bind name}" FontSize="25" FontWeight="SemiBold" Style="{ThemeResource BaseTextBlockStyle}" HorizontalAlignment="Left" Margin="0,0,0,6" LineHeight="20"/>
+
+                                            <StackPanel
+                                            Orientation="Horizontal">
+                                                <TextBlock 
+                                        Width="300"
+                                        VerticalAlignment="Center"
+                                        TextAlignment="Left"
+                                        FontFamily="Adobe Arabic"
+                                        Foreground="Black"
+                                        Text="{x:Bind description}"
+                                        FontWeight="Normal" 
+                                        LineHeight="25"
+                                        Style="{ThemeResource BodyTextBlockStyle}" TextTrimming="CharacterEllipsis" MaxLines="1"/>
+                                            </StackPanel>
+                                            <StackPanel
+                                            Orientation="Horizontal">
+                                                <SymbolIcon
+                                Symbol="Play" IsHitTestVisible="False" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
+                                                <TextBlock
+                                        Width="300"
+                                        VerticalAlignment="Center"
+                                        TextAlignment="Left"
+                                        FontFamily="Adobe Arabic"
+                                        Foreground="Black"
+                                        Text="{x:Bind id}" FontSize="20" FontWeight="Normal" HorizontalAlignment="Left" Style="{ThemeResource CaptionTextBlockStyle}"/>
+                                            </StackPanel>
+
+                                        </StackPanel>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                </ScrollViewer>
+                <StackPanel
+                Orientation="Vertical"
+                >
+                <TextBlock
+                    FontSize="30"
+                    FontFamily="Adobe Arabic"
+                    Foreground="Black"
+                    >
+                    Albulm Hot
+                </TextBlock>
+            </StackPanel>
+            </StackPanel>
+            <StackPanel
+                Margin="80,0,0,0"
+                VerticalAlignment="Bottom"
+                Orientation="Vertical"
+                >
+                <TextBlock
+                    FontSize="40"
+                    FontFamily="Adobe Arabic"
+                    Foreground="Black"
+                    >
+                    Albulm Hot
+                </TextBlock>
+                <StackPanel
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Center"
+                    >
+                    <Image
+                    Margin="40,0,0,0"
+                    HorizontalAlignment="Left"
+                    Height="100"
+                    Width="100"
+                    VerticalAlignment="Bottom"
+                   Stretch="UniformToFill"
+                    Source="/Assets/album/album1.jpg"
+                    ></Image>
+                    <Image
+                    Margin="40,0,0,0"
+                    HorizontalAlignment="Left"
+                    Height="100"
+                    Width="100"
+                    VerticalAlignment="Bottom"
+                   Stretch="UniformToFill"
+                    Source="/Assets/album/album2.jpg"
+                    ></Image>
+                    <Image
+                    Margin="40,0,0,0"
+                    HorizontalAlignment="Left"
+                    Height="100"
+                    Width="100"
+                    VerticalAlignment="Bottom"
+                   Stretch="UniformToFill"
+                    Source="/Assets/album/album3.jpg"
+                    ></Image>
+                    <Image
+                    Margin="40,0,0,0"
+                    HorizontalAlignment="Left"
+                    Height="100"
+                    Width="100"
+                    VerticalAlignment="Bottom"
+                   Stretch="UniformToFill"
+                    Source="/Assets/album/album4.jpg"
+                    ></Image>
+                    <Image
+                    Margin="40,0,0,0"
+                    HorizontalAlignment="Left"
+                    Height="100"
+                    Width="100"
+                    VerticalAlignment="Bottom"
+                   Stretch="UniformToFill"
+                    Source="/Assets/album/album5.jpg"
+                    ></Image>
+                    <Image
+                    Margin="40,0,0,0"
+                    HorizontalAlignment="Left"
+                    Height="100"
+                    Width="100"
+                    VerticalAlignment="Bottom"
+                   Stretch="UniformToFill"
+                    Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
+                    ></Image>
+                </StackPanel>
+                
+                
             </StackPanel>
         </StackPanel>
 

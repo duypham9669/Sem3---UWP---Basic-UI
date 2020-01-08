@@ -40,6 +40,21 @@
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\2.jpg">
       <PackagePath>Assets\2.jpg</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\album\album1.jpg">
+      <PackagePath>Assets\album\album1.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\album\album2.jpg">
+      <PackagePath>Assets\album\album2.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\album\album3.jpg">
+      <PackagePath>Assets\album\album3.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\album\album4.jpg">
+      <PackagePath>Assets\album\album4.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\album\album5.jpg">
+      <PackagePath>Assets\album\album5.jpg</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\FPTSEM3\ASM_SEM3_UWP\ASM_SEM3_UWP\Assets\backgroud.jpg">
       <PackagePath>Assets\backgroud.jpg</PackagePath>
     </AppxPackagedFile>
