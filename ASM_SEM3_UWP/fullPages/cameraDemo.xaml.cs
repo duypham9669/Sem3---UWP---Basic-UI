@@ -38,34 +38,20 @@ namespace ASM_SEM3_UWP.fullPages
             // get upload url
             HttpClient client = new HttpClient();
             var uploadUrl = client.GetAsync("https://2-dot-backup-server-001.appspot.com/get-upload-token").Result.Content.ReadAsStringAsync().Result;
-            Debug.WriteLine("Upload url: " + uploadUrl);
-
-            CameraCaptureUI captureUI = new CameraCaptureUI();
-            captureUI.PhotoSettings.Format = CameraCaptureUIPhotoFormat.Jpeg;
-            captureUI.PhotoSettings.CroppedSizeInPixels = new Size(200, 200);
-            
-            this.photo = await captureUI.CaptureFileAsync(CameraCaptureUIMode.Photo);
-            
-            if (this.photo == null)
+           
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
+            this.photo = await picker.PickSingleFileAsync();
+            if (photo != null)
             {
-                // User cancelled photo capture
-                return;
-            }
-            //var picker = new Windows.Storage.Pickers.FileOpenPicker();
-            //picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
-            //picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
-            //picker.FileTypeFilter.Add(".jpg");
-            //picker.FileTypeFilter.Add(".jpeg");
-            //picker.FileTypeFilter.Add(".png");
-
-            //this.photo = await picker.PickSingleFileAsync();
-            //if (photo != null)
-            //{
                 
-            //    Debug.WriteLine("photo===" + photo);
-            //}
+                Debug.WriteLine("photo===" + photo);
+            }
             
-
             HttpUploadFile(uploadUrl, "myFile", "image/png");
 
         }

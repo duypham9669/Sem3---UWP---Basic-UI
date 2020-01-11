@@ -68,14 +68,14 @@ namespace ASM_SEM3_UWP
             if (tokenFile != null)
             {
                 LogOut.Visibility = Visibility.Visible;
-                infomation.Visibility = Visibility.Visible;
+                information.Visibility = Visibility.Visible;
                 Login2.Visibility = Visibility.Collapsed;
                 Login.token = await FilehanderService.Readfile("token.txt");
             }
             else
             {
                 Login2.Visibility = Visibility.Visible;
-                infomation.Visibility = Visibility.Collapsed;
+                information.Visibility = Visibility.Collapsed;
                 LogOut.Visibility = Visibility.Collapsed;
             }
         }
@@ -111,14 +111,16 @@ namespace ASM_SEM3_UWP
             checkToken();
         }
 
-        private async void NavView_ItemInvoked(NavigationView sender,
-                                         NavigationViewItemInvokedEventArgs args)
+        private async void NavView_ItemInvoked(NavigationView sender, NavigationViewItemInvokedEventArgs args)
         {
 
 
             var navItemTag2 = args.InvokedItemContainer.Tag.ToString();
             if (navItemTag2.Equals("LogOut"))
             {
+                
+                infomation info = new infomation();
+                info.stopmusic();
                 LogOut2();
             }
 
@@ -141,12 +143,24 @@ namespace ASM_SEM3_UWP
         }
         private async void LogOut2()
         {
-            var tokenFile = await ApplicationData.Current.LocalFolder.TryGetItemAsync("token.txt");
-            if (tokenFile != null)
-            {
-                 await FilehanderService.deleteFile("token.txt");
-            }
+
+                var tokenDelete = await ApplicationData.Current.LocalFolder.TryGetItemAsync("token.txt");
+                if (tokenDelete != null)
+                {
+                    await FilehanderService.deleteFile("token.txt");
+                }
+                var emailDelete = await ApplicationData.Current.LocalFolder.TryGetItemAsync("email");
+                if (emailDelete != null)
+                {
+                await FilehanderService.deleteFile("email");
+                }
+                var passDelete = await ApplicationData.Current.LocalFolder.TryGetItemAsync("email");
+                if (passDelete != null)
+                {
+                    await FilehanderService.deleteFile("pass");
+                }
             checkToken();
+
 
         }
         // NavView_SelectionChanged is not used in this example, but is shown for completeness.
@@ -231,11 +245,9 @@ namespace ASM_SEM3_UWP
             else if (ContentFrame.SourcePageType != null)
             {
                 var item = _pages.FirstOrDefault(p => p.Page == e.SourcePageType);
-
                 NavView.SelectedItem = NavView.MenuItems
                     .OfType<NavigationViewItem>()
                     .First(n => n.Tag.Equals(item.Tag));
-
                 NavView.Header =
                     ((NavigationViewItem)NavView.SelectedItem)?.Content?.ToString();
             }

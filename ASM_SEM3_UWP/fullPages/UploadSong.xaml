@@ -14,7 +14,7 @@
                 Stretch="UniformToFill"
                 ScrollViewer.ZoomMode="Disabled"
                 Opacity="0.5"
-                ImageSource="/Assets/img/headphone7.jpg"/>
+                ImageSource="/Assets/img/headphone5.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -51,6 +51,7 @@
                 >
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
                     <TextBox
+                        x:Name="songName"
                 Margin="0,0,0,0"
                 BorderThickness="0"
                 FontFamily="Adobe Arabic"
@@ -60,19 +61,54 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                         ></TextBox>
                 </Border>
+                <TextBlock
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songName"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
                     <TextBox
+                        x:Name="songDescription"
+                Margin="0,0,0,0"
+                BorderThickness="0"
+                FontFamily="Adobe Arabic"
+                FontSize="20"
+                PlaceholderText="description"
+                Background="{x:Null}"
+                FocusVisualPrimaryBrush="{x:Null}"
+                        ></TextBox>
+                </Border>
+                <TextBlock
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songDescription"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
+                <Border BorderBrush="White" BorderThickness="0,0,0,1">
+                    <TextBox
+                        x:Name="songAuthor"
                 Margin="0,10,0,0"        
                 BorderThickness="0"
-               FontFamily="Adobe Arabic"
+                FontFamily="Adobe Arabic"
                 FontSize="20"
                 PlaceholderText="Author"
                 Background="{x:Null}"
                 FocusVisualPrimaryBrush="{x:Null}"
                         ></TextBox>
                 </Border>
+                <TextBlock
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songAuthor"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
                     <TextBox
+                        x:Name="songSinger"
                 Margin="0,10,0,0"
                 FontFamily="Adobe Arabic"
                 BorderThickness="0"
@@ -82,9 +118,16 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                 ></TextBox>
                 </Border>
-                
+                <TextBlock
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songSinger"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
                     <TextBox
+                        x:Name="songThumbnail"
                 Margin="0,10,0,0"
                 FontFamily="Adobe Arabic"
                 BorderThickness="0"
@@ -94,9 +137,16 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                 ></TextBox>
                 </Border>
-
+                <TextBlock
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songThumbnail"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
                     <TextBox
+                        x:Name="songLink"
                 Margin="0,10,0,0"        
                 BorderThickness="0"
                FontFamily="Adobe Arabic"
@@ -106,6 +156,13 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                         ></TextBox>
                 </Border>
+                <TextBlock
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songLink"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Grid
                 Width="800"
                 Padding="0,30,0,0"

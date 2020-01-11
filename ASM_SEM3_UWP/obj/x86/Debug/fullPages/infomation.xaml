@@ -48,12 +48,14 @@
                 MaxWidth="400"
                 HorizontalAlignment="Center"
                 >
-                <Image
+                <Image x:ConnectionId='21'
+                    x:Name="avatar"
                     VerticalAlignment="Bottom"
                    Stretch="UniformToFill"
                     Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
                     ></Image>
             </StackPanel>
+            
             <Grid
                 Grid.Row="0"
                 Grid.Column="0"
@@ -70,7 +72,7 @@
                     
                     Grid.Row="0"
                     >
-                    <TextBlock x:ConnectionId='11'
+                    <TextBlock x:ConnectionId='16'
               x:Name="memberName"
              Foreground="Black"
             Padding="40,0,0,10"
@@ -78,6 +80,9 @@
             FontFamily="Adobe Arabic" 
             >name
                 </TextBlock>
+                    <ProgressRing x:ConnectionId='17'
+                        FontSize="50"
+                        x:Name="progress1"/>
                 <StackPanel
                     Margin="40,0,0,0"
                     Orientation="Vertical"
@@ -87,7 +92,7 @@
                             >
                             <SymbolIcon
                                 Symbol="CellPhone" IsHitTestVisible="False" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
-                            <TextBlock x:ConnectionId='14'
+                            <TextBlock x:ConnectionId='20'
                          x:Name="memberPhone"
                         Foreground="Black"
                         FontSize="25"
@@ -102,7 +107,7 @@
                             >
                             <SymbolIcon
                                 Symbol="Home" IsHitTestVisible="False" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
-                            <TextBlock x:ConnectionId='13'
+                            <TextBlock x:ConnectionId='19'
                         IsRightTapEnabled="False"
                             x:Name="memberAddress"
                         Foreground="Black"
@@ -117,7 +122,7 @@
                             <SymbolIcon
                                 Symbol="Mail" IsHitTestVisible="False" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
 
-                            <TextBlock x:ConnectionId='12'
+                            <TextBlock x:ConnectionId='18'
                         x:Name="memberEmail"
                         Foreground="Black"
                         FontSize="25"
@@ -177,26 +182,26 @@
             HorizontalAlignment="Center"
                                               >
                 <ScrollViewer
-                    VerticalScrollBarVisibility="Visible"
+                    IsEnabled="True"
                     >
-                    <ListView x:ConnectionId='3' x:Name="Songs"                               IsItemClickEnabled="True">
-                       
-                        <ListView.ItemTemplate>
+                    <ListView x:ConnectionId='8' x:Name="Songs"                               IsItemClickEnabled="True">
+                        
+                            <ListView.ItemTemplate>
                         <DataTemplate                         >
-                                <Border x:ConnectionId='5' Name="Border" BorderBrush="Transparent" BorderThickness="2">
-                                    <Grid x:ConnectionId='6'
+                                <Border x:ConnectionId='10' Name="Border" BorderBrush="Transparent" BorderThickness="2">
+                                    <Grid x:ConnectionId='11'
                                 Margin="0,12,0,12"                                          >
                                         <Grid.ColumnDefinitions>
                                             <ColumnDefinition Width="Auto" MinWidth="150"/>
                                             <ColumnDefinition Width="*" />
                                         </Grid.ColumnDefinitions>
-                                        <Image x:ConnectionId='7'                             MaxWidth="100" Stretch="Fill"/>
+                                        <Image x:ConnectionId='12'                             MaxWidth="100" Stretch="Fill"/>
                                         <StackPanel 
                                     Margin="12,0,0,0" 
                                     Grid.Column="1" 
                                     Orientation="Horizontal"
                                     >
-                                            <TextBlock x:ConnectionId='8'
+                                            <TextBlock x:ConnectionId='13'
                                         Width="350"
                                          VerticalAlignment="Center"
                                         TextAlignment="Left"
@@ -206,7 +211,7 @@
 
                                             <StackPanel
                                             Orientation="Horizontal">
-                                                <TextBlock x:ConnectionId='10' 
+                                                <TextBlock x:ConnectionId='15' 
                                         Width="300"
                                         VerticalAlignment="Center"
                                         TextAlignment="Left"
@@ -221,7 +226,7 @@
                                             Orientation="Horizontal">
                                                 <SymbolIcon
                                 Symbol="Play" IsHitTestVisible="False" FocusVisualPrimaryBrush="Black" Foreground="Black"/>
-                                                <TextBlock x:ConnectionId='9'
+                                                <TextBlock x:ConnectionId='14'
                                         Width="300"
                                         VerticalAlignment="Center"
                                         TextAlignment="Left"
@@ -272,7 +277,7 @@
                     Width="100"
                     VerticalAlignment="Bottom"
                    Stretch="UniformToFill"
-                    Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
+                    Source="/Assets/album/album1.jpg"
                     ></Image>
                     <Image
                     Margin="40,0,0,0"
@@ -281,7 +286,7 @@
                     Width="100"
                     VerticalAlignment="Bottom"
                    Stretch="UniformToFill"
-                    Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
+                    Source="/Assets/album/album2.jpg"
                     ></Image>
                     <Image
                     Margin="40,0,0,0"
@@ -290,7 +295,7 @@
                     Width="100"
                     VerticalAlignment="Bottom"
                    Stretch="UniformToFill"
-                    Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
+                    Source="/Assets/album/album3.jpg"
                     ></Image>
                     <Image
                     Margin="40,0,0,0"
@@ -299,7 +304,7 @@
                     Width="100"
                     VerticalAlignment="Bottom"
                    Stretch="UniformToFill"
-                    Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
+                    Source="/Assets/album/album4.jpg"
                     ></Image>
                     <Image
                     Margin="40,0,0,0"
@@ -308,7 +313,7 @@
                     Width="100"
                     VerticalAlignment="Bottom"
                    Stretch="UniformToFill"
-                    Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
+                    Source="/Assets/album/album5.jpg"
                     ></Image>
                     <Image
                     Margin="40,0,0,0"
@@ -317,12 +322,36 @@
                     Width="100"
                     VerticalAlignment="Bottom"
                    Stretch="UniformToFill"
-                    Source="https://lh3.googleusercontent.com/d/1g-YIc11IDc3NPrOVtz0JAPh9EvLVv6EY=s720?authuser=0"
+                    Source="/Assets/album/album6.jpg"
                     ></Image>
                 </StackPanel>
-                
-                
             </StackPanel>
+            <CommandBar
+                VerticalAlignment="Top"
+                HorizontalContentAlignment="Center"
+                >
+
+                <AppBarToggleButton Icon="Shuffle" Label="Shuffle"/>
+                <AppBarToggleButton Icon="RepeatAll" Label="Repeat"/>
+                <AppBarSeparator/>
+                <AppBarButton x:ConnectionId='4' Icon="Back" Label="Previous"                         />
+                <AppBarButton x:ConnectionId='5' x:Name="PlayButton" Icon="Play" Label="Play"                           />
+                <AppBarButton x:ConnectionId='6' Icon="Forward" Label="Next"                     />
+
+                <CommandBar.SecondaryCommands>
+                    <AppBarButton Label="Like"/>
+                    <AppBarButton Label="Dislike"/>
+                </CommandBar.SecondaryCommands>
+                <CommandBar.Content>
+                    <TextBlock x:ConnectionId='7'
+                        Foreground="White"
+                        FontSize="25"
+                        FontFamily="Adobe Arabic"
+                        x:Name="StatusText" Text="Now playing..." Margin="0"/>
+                </CommandBar.Content>
+            </CommandBar>
+            <MediaPlayerElement x:ConnectionId='3' 
+                x:Name="MyPlayer"/>
         </StackPanel>
 
 

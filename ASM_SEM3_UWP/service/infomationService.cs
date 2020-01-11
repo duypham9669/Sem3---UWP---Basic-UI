@@ -14,7 +14,6 @@ namespace ASM_SEM3_UWP.service
     class infomationService
     {
         private static readonly string MemberInformationApiUrl = "https://2-dot-backup-server-002.appspot.com/_api/v2/members/information";
-        private static readonly string uriGetSong = "https://2-dot-backup-server-002.appspot.com/_api/v2/songs";
 
         public async Task<user> GetMemberInformation(string token)
         {
@@ -31,7 +30,7 @@ namespace ASM_SEM3_UWP.service
             }
             return null;
         }
-        public async Task<ObservableCollection<song>> GetListSong(string token)
+        public async Task<ObservableCollection<song>> GetListSong(string token, String uriGetSong)
         {
             ObservableCollection<song> list = new ObservableCollection<song>();
             // gọi shipper

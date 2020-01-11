@@ -68,9 +68,9 @@
                 
                 <NavigationViewItemHeader x:Name="MainPagesHeader"
                                            Content="Main pages"/>
-                <NavigationViewItem Visibility="Collapsed" x:Name="infomation" Tag="user" Icon="OtherUser" Content="Infomation"/>
+                <NavigationViewItem Visibility="Collapsed" x:Name="information" Tag="user" Icon="OtherUser" Content="Infomation"/>
 
-                <NavigationViewItem  x:Name="music2" Tag="music" Icon="Audio" Content="My Music"/>
+                <NavigationViewItem Visibility="Collapsed" x:Name="music2" Tag="music" Icon="Audio" Content="My Music"/>
                 
                 <NavigationViewItem Tag="Newmusic" Icon="Rotate" Content="New Playlist Music"/>
 
@@ -84,6 +84,7 @@
                 </NavigationViewItem>
                 <NavigationViewItem Visibility="Collapsed" x:Name="Login2" Tag="Login" Icon="Contact" Content="Login"/>
                 <NavigationViewItem Visibility="Collapsed" x:Name="LogOut" Tag="LogOut" Icon="Share" Content="Log Out"/>
+                <NavigationViewItem Visibility="Collapsed" x:Name="Register" Tag="Register" Content="Log Out"/>
 
 
 

@@ -14,7 +14,7 @@
                 Stretch="UniformToFill"
                 ScrollViewer.ZoomMode="Disabled"
                 Opacity="0.5"
-                ImageSource="/Assets/img/headphone7.jpg"/>
+                ImageSource="/Assets/img/headphone5.jpg"/>
         </Grid.Background>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"></RowDefinition>
@@ -50,7 +50,8 @@
                 Width="1000"
                 >
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
-                    <TextBox
+                    <TextBox x:ConnectionId='15'
+                        x:Name="songName"
                 Margin="0,0,0,0"
                 BorderThickness="0"
                 FontFamily="Adobe Arabic"
@@ -60,19 +61,54 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                         ></TextBox>
                 </Border>
+                <TextBlock x:ConnectionId='2'
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songName"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
-                    <TextBox
+                    <TextBox x:ConnectionId='14'
+                        x:Name="songDescription"
+                Margin="0,0,0,0"
+                BorderThickness="0"
+                FontFamily="Adobe Arabic"
+                FontSize="20"
+                PlaceholderText="description"
+                Background="{x:Null}"
+                FocusVisualPrimaryBrush="{x:Null}"
+                        ></TextBox>
+                </Border>
+                <TextBlock x:ConnectionId='3'
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songDescription"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
+                <Border BorderBrush="White" BorderThickness="0,0,0,1">
+                    <TextBox x:ConnectionId='13'
+                        x:Name="songAuthor"
                 Margin="0,10,0,0"        
                 BorderThickness="0"
-               FontFamily="Adobe Arabic"
+                FontFamily="Adobe Arabic"
                 FontSize="20"
                 PlaceholderText="Author"
                 Background="{x:Null}"
                 FocusVisualPrimaryBrush="{x:Null}"
                         ></TextBox>
                 </Border>
+                <TextBlock x:ConnectionId='4'
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songAuthor"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
-                    <TextBox
+                    <TextBox x:ConnectionId='12'
+                        x:Name="songSinger"
                 Margin="0,10,0,0"
                 FontFamily="Adobe Arabic"
                 BorderThickness="0"
@@ -82,9 +118,16 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                 ></TextBox>
                 </Border>
-                
+                <TextBlock x:ConnectionId='5'
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songSinger"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
-                    <TextBox
+                    <TextBox x:ConnectionId='11'
+                        x:Name="songThumbnail"
                 Margin="0,10,0,0"
                 FontFamily="Adobe Arabic"
                 BorderThickness="0"
@@ -94,9 +137,16 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                 ></TextBox>
                 </Border>
-
+                <TextBlock x:ConnectionId='6'
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songThumbnail"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Border BorderBrush="White" BorderThickness="0,0,0,1">
-                    <TextBox
+                    <TextBox x:ConnectionId='10'
+                        x:Name="songLink"
                 Margin="0,10,0,0"        
                 BorderThickness="0"
                FontFamily="Adobe Arabic"
@@ -106,6 +156,13 @@
                 FocusVisualPrimaryBrush="{x:Null}"
                         ></TextBox>
                 </Border>
+                <TextBlock x:ConnectionId='7'
+                    FontFamily="Adobe Arabic"
+                    x:Name="vld_songLink"
+                    Foreground="Red"
+                    FontSize="15"
+                    >
+                </TextBlock>
                 <Grid
                 Width="800"
                 Padding="0,30,0,0"
@@ -113,7 +170,7 @@
                 Grid.Column="0"
                 >
 
-                    <Button x:ConnectionId='2'
+                    <Button x:ConnectionId='8'
                         Grid.Column="0"
                     Background="Green"
                     Margin="0,10,0,0"
@@ -122,7 +179,7 @@
                     HorizontalAlignment="Left"
                                       
                         >Up load</Button>
-                    <Button x:ConnectionId='3'
+                    <Button x:ConnectionId='9'
                         Grid.Column="0"
                     Background="red"
                     Margin="0,10,0,0"

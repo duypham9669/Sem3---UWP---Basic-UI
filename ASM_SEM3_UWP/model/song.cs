@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ASM_SEM3_UWP.model
 {
-    class song
+    public class song
     {
         public long id { get; set; }
         public String name { get; set; }

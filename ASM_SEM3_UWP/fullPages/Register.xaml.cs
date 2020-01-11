@@ -21,6 +21,8 @@ using System.Net.Http;
 using System.Text;
 using System.Diagnostics;
 using Windows.UI.Xaml.Media.Imaging;
+using System.Net;
+using Windows.Storage;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -34,7 +36,8 @@ namespace ASM_SEM3_UWP.fullPages
         private registerService registerservice;
         private DateTime _birthDay=DateTime.Now;
         private int gender_ = 2;
-
+        private StorageFile photo;
+        string imageUrl = null;
         public Register()
         {
             this.InitializeComponent();
@@ -89,9 +92,7 @@ namespace ASM_SEM3_UWP.fullPages
             String pass2_ = input_pass2.Password.ToString(); 
             String address_ = input_address.Text;
             String phone_ = input_phone.Text;
-            String avataLink_ = input_avataLink.Text;
-
-
+            
 
             Boolean check = true;
             String email_ = input_email.Text;
@@ -156,11 +157,14 @@ namespace ASM_SEM3_UWP.fullPages
             {
                 vld_phone.Text = "input phone again";
                 check = false;
-
+            }
+            if (imageUrl == null)
+            {
+                vld_avataLink.Text = "please chose images";
             }
             if (check == true)
             {
-                RegisterUser(firstName_, lastName_, pass1_, address_, phone_, avataLink_, gender_, email_, _birthDay);
+                RegisterUser(firstName_, lastName_, pass1_, address_, phone_, imageUrl, gender_, email_, _birthDay);
             }
         }
 
@@ -197,6 +201,91 @@ namespace ASM_SEM3_UWP.fullPages
             var memberRespon = JsonConvert.DeserializeObject<user>(dataRespon);
             //id_data.Text = memberRespon.id;
             Debug.WriteLine(memberRespon.id);
+            if (memberRespon.id != null) {
+                input_firstName.Text = "";
+                input_lastName.Text="";
+                input_pass1.Password = "";
+                input_pass2.Password="";
+                input_address.Text="";
+                input_phone.Text="";
+                result.Text = "SUCESS";
+            }
+        }
+        private async void Button_Click(object sender, RoutedEventArgs e)
+        {
+            // get upload url
+            HttpClient client = new HttpClient();
+            var uploadUrl = client.GetAsync("https://2-dot-backup-server-001.appspot.com/get-upload-token").Result.Content.ReadAsStringAsync().Result;
+
+            var picker = new Windows.Storage.Pickers.FileOpenPicker();
+            picker.ViewMode = Windows.Storage.Pickers.PickerViewMode.Thumbnail;
+            picker.SuggestedStartLocation = Windows.Storage.Pickers.PickerLocationId.PicturesLibrary;
+            picker.FileTypeFilter.Add(".jpg");
+            picker.FileTypeFilter.Add(".jpeg");
+            picker.FileTypeFilter.Add(".png");
+            this.photo = await picker.PickSingleFileAsync();
+            if (photo != null)
+            {
+
+                Debug.WriteLine("photo===" + photo);
+            }
+
+            HttpUploadFile(uploadUrl, "myFile", "image/png");
+
+        }
+
+        public async void HttpUploadFile(string url, string paramName, string contentType)
+        {
+            string boundary = "---------------------------" + DateTime.Now.Ticks.ToString("x");
+            byte[] boundarybytes = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "\r\n");
+
+            HttpWebRequest wr = (HttpWebRequest)WebRequest.Create(url);
+            wr.ContentType = "multipart/form-data; boundary=" + boundary;
+            wr.Method = "POST";
+
+            Stream rs = await wr.GetRequestStreamAsync();
+            rs.Write(boundarybytes, 0, boundarybytes.Length);
+
+            string header = string.Format("Content-Disposition: form-data; name=\"{0}\"; filename=\"{1}\"\r\nContent-Type: {2}\r\n\r\n", paramName, "path_file", contentType);
+            byte[] headerbytes = System.Text.Encoding.UTF8.GetBytes(header);
+            rs.Write(headerbytes, 0, headerbytes.Length);
+
+            // write file.
+            Stream fileStream = await this.photo.OpenStreamForReadAsync();
+            byte[] buffer = new byte[4096];
+            int bytesRead = 0;
+            while ((bytesRead = fileStream.Read(buffer, 0, buffer.Length)) != 0)
+            {
+                rs.Write(buffer, 0, bytesRead);
+            }
+
+            byte[] trailer = System.Text.Encoding.ASCII.GetBytes("\r\n--" + boundary + "--\r\n");
+            rs.Write(trailer, 0, trailer.Length);
+            WebResponse wresp = null;
+            try
+            {
+                wresp = await wr.GetResponseAsync();
+                Stream stream2 = wresp.GetResponseStream();
+                StreamReader reader2 = new StreamReader(stream2);
+                //url:
+                imageUrl = reader2.ReadToEnd();
+                //
+                Debug.WriteLine("imageUrl" + imageUrl);
+               
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine("Error uploading file", ex.StackTrace);
+                Debug.WriteLine("Error uploading file", ex.InnerException);
+                if (wresp != null)
+                {
+                    wresp = null;
+                }
+            }
+            finally
+            {
+                wr = null;
+            }
         }
     }
 }

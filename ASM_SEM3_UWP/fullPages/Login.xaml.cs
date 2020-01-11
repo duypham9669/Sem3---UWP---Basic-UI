@@ -45,7 +45,9 @@ namespace ASM_SEM3_UWP.fullPages
         }
         private async void btn_Submit(object sender, RoutedEventArgs e)
         {
+            progress1.IsActive = true;
             await validateAsync();
+            
         }
         private void checkRemember(String email, String pass)
         {
@@ -65,23 +67,27 @@ namespace ASM_SEM3_UWP.fullPages
             {
                 vld_email.Text = "input email";
                 check = false;
+                progress1.IsActive = false;
             }
             bool match;
             if ((match = Regex.IsMatch(email2, "@gmail.com")) == false)
             {
                 vld_email.Text = "input again email";
                 check = false;
+                progress1.IsActive = false;
             }
             if (pass2 is null || pass2.Length < 1)
             {
                 vld_pass.Text = "input pass";
                 check = false;
+                progress1.IsActive = false;
             }
             if (check == true)
             {
                 await loginAsync(email2, pass2);
                 checkRemember(email2, pass2);
                 checkStatus.status = true;
+                progress1.IsActive = false;
             }
         }
         private async System.Threading.Tasks.Task loginAsync(String email, String pass)
@@ -93,10 +99,13 @@ namespace ASM_SEM3_UWP.fullPages
             await FilehanderService.WriteFile("token.txt", token);
             navigation.currentLayout.checkToken();
             this.Frame.Navigate(typeof(MainPage));
+                progress1.IsActive = false;
+
             }
             else
             {
                 loginfail.Text = "Invalid information, Please login again!";
+                progress1.IsActive = false;
             }
 
         }

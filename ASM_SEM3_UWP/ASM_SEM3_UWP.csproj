@@ -180,6 +180,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Assets\2.jpg" />
+    <Content Include="Assets\album\album6.jpg" />
     <Content Include="Assets\album\album1.jpg" />
     <Content Include="Assets\album\album2.jpg" />
     <Content Include="Assets\album\album3.jpg" />
@@ -189,6 +190,8 @@
     <Content Include="Assets\backgroud3.jpg" />
     <Content Include="Assets\background2.jpg" />
     <Content Include="Assets\headphone.jpg" />
+    <Content Include="Assets\home.png" />
+    <Content Include="Assets\home2.png" />
     <Content Include="Assets\img\headphone2.jpg" />
     <Content Include="Assets\img\headphone3.jpg" />
     <Content Include="Assets\img\headphone4.jpg" />

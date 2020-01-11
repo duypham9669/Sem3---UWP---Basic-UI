@@ -7,11 +7,22 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 >
     <Grid
-        Background="#f9f7f0" 
+        x:Name="grip1"
         >
-        <TextBlock
-            Foreground="Black"
-            FontSize="25" FontFamily="Adobe Caslon Pro"
-            >Most Popular</TextBlock>
+        <Grid.Background>
+            <ImageBrush
+                x:Name="imageHome"
+                Stretch="UniformToFill"
+                ScrollViewer.ZoomMode="Disabled"
+                Opacity="0.3"
+                ImageSource="/Assets/home.png"/>
+        </Grid.Background>
+        <FlipView MaxWidth="1600" Height="480">
+            <Image Source="ms-appx:///Assets/img/headphone2.jpg" AutomationProperties.Name="Cliff"/>
+            <Image Source="ms-appx:///Assets/img/headphone3.jpg" AutomationProperties.Name="Grapes"/>
+            <Image Source="ms-appx:///Assets/img/headphone4.jpg" AutomationProperties.Name="Rainier"/>
+            <Image Source="ms-appx:///Assets/img/headphone5.jpg" AutomationProperties.Name="Sunset"/>
+            <Image Source="ms-appx:///Assetsimg/headphone6.jpg" AutomationProperties.Name="Valley"/>
+        </FlipView>
     </Grid>
 </Page>

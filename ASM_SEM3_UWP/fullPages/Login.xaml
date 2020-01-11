@@ -123,6 +123,9 @@
                     HorizontalAlignment="Left"
                     Click="btn_Submit"
                         >Login</Button>
+                    <ProgressRing
+                        FontSize="50"
+                        x:Name="progress1"/>
                     <Button
                         Grid.Column="0"
                     Background="Pink"

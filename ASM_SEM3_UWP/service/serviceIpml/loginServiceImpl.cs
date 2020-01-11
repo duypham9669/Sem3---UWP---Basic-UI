@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using ASM_SEM3_UWP.model;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -39,6 +40,10 @@ namespace ASM_SEM3_UWP.service.serviceIpml
 
             return (string)JObject.Parse(stringContent)["token"];
         }
-
+        public List<song> loadListSong(String mytoken)
+        {
+            
+            return null;
+        }
     }
 }
